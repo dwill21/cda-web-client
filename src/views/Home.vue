@@ -1,20 +1,36 @@
 <template>
-  <div class="home">
+  <div>
     <Header></Header>
-    <HelloWorld msg="Welcome to Your New Website"/>
+    <div id="bg"></div>
+    <h2 id="tagline">Power your business development with data-driven decisions</h2>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import Header from '@/components/Header.vue'
+import Header from '../components/Header.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
     Header
   }
 }
 </script>
+
+<style scoped>
+  #bg {
+    height: 100vh;
+    width: 100vw;
+    background-color: #444e57;
+  }
+
+  #tagline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    font-size: 40px;
+    color: white;
+  }
+</style>

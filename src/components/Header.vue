@@ -7,8 +7,9 @@
 
     <b-collapse is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#" right>About</b-nav-item>
+        <b-nav-item href="#" right>What We Do</b-nav-item>
         <b-nav-item href="#" right>Our Advantage</b-nav-item>
+        <b-nav-item href="/about" right>About</b-nav-item>
         <b-nav-item href="#" right>Contact</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
