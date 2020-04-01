@@ -2,18 +2,23 @@
   <div>
     <Header></Header>
     <div id="bg"></div>
-    <h2 id="tagline">Power your business development with data-driven decisions</h2>
+    <div id="tagline">
+      <h2 style="font-size: 40px">Power your business development with data-driven decisions</h2>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
-    Header
-  }
+    Header,
+    Footer,
+  },
 }
 </script>
 
@@ -30,7 +35,6 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    font-size: 40px;
     color: white;
   }
 </style>
