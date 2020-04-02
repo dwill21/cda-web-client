@@ -1,5 +1,5 @@
 <template>
-  <div id="main-content">
+  <div id="main-content" style="min-height: calc(100vh - 110px)">
     <h2 style="padding: 90px 0 40px">Meet our team</h2>
 
     <b-card-group style="display:block">
