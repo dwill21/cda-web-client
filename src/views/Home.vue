@@ -1,23 +1,21 @@
 <template>
-  <div id="content-wrapper">
-    <b-container id="main-content">
-      <b-row>
-        <b-col>
-          <h2 id="tagline">Power your business development with <span class="emphasis">data-driven decisions</span></h2>
-        </b-col>
+  <b-container>
+    <b-row align-v="center" class="h-100" style="min-height: calc(100vh - 110px)">
+      <b-col md="6">
+        <h2 id="tagline">Power your business development with <span class="emphasis">data-driven decisions</span></h2>
+      </b-col>
 
-        <b-col>
-          <b-card-group id="cards" columns>
-            <b-card title="Black Hat" :img-src="require('../assets/data.jpg')" img-alt="Data" overlay class="card"></b-card>
+      <b-col md="6">
+        <b-card-group id="cards" columns>
+          <b-card title="Black Hat" :img-src="require('../assets/data.jpg')" img-alt="Data" overlay class="card"></b-card>
 
-            <b-card title="Price to Win" :img-src="require('../assets/charts.jpeg')" img-alt="Image" overlay class="card"></b-card>
+          <b-card title="Price to Win" :img-src="require('../assets/charts.jpeg')" img-alt="Image" overlay class="card"></b-card>
 
-            <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/documents.jpeg')" img-alt="Image" overlay class="card"></b-card>
-          </b-card-group>
-        </b-col>
-      </b-row>
-    </b-container>
-  </div>
+          <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/documents.jpeg')" img-alt="Image" overlay class="card"></b-card>
+        </b-card-group>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -38,28 +36,9 @@ export default {
 </script>
 
 <style scoped>
-  #content-wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 55px); /* leaves room for the footer */
-  }
-
-  #main-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-  }
-
   #tagline {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: left;
-    font-size:40px;
+    font-size: 40px;
     color: white;
   }
 

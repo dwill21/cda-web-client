@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="dark" variant="dark" fixed="top">
+  <b-navbar type="dark" variant="dark">
     <b-navbar-brand href="/">
       <img src="../assets/knight-white.png" class="d-inline-block align-top logo" alt="Logo">
       <span v-if="windowWidth >= 768">Competitive Data Analytics</span>
