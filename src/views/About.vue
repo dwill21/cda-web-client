@@ -7,6 +7,7 @@
         <b-row no-gutters>
           <b-col lg="4">
             <b-card-title style="text-align:left">{{member.name}}</b-card-title>
+            <b-card-img :src="require('../assets/avatar-placeholder.png')" style="height:25vmin; width:25vmin"></b-card-img>
           </b-col>
 
           <b-col lg="8">
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-  import { BCard, BCardGroup, BCardText, BCardTitle, BCol, BRow } from 'bootstrap-vue'
+  import { BCard, BCardGroup, BCardImg, BCardText, BCardTitle, BCol, BRow } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -28,6 +29,7 @@
     components: {
       BCard,
       BCardGroup,
+      BCardImg,
       BCardText,
       BCardTitle,
       BCol,
