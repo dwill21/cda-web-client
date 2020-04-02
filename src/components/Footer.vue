@@ -12,7 +12,7 @@
 
 <style scoped>
   .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     height: 55px;
     width: 100%;

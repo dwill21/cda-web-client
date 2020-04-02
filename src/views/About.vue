@@ -1,5 +1,61 @@
 <template>
-  <div class="about">
-    <h1 style="position:relative; top:100px; text-align:left">This is an about page</h1>
+  <div id="main-content">
+    <h2 style="padding: 90px 0 40px">Meet our team</h2>
+
+    <b-card-group style="display:block">
+      <b-card v-for="member in teamArray" :key="member.name" bg-variant="secondary" style="margin-bottom:20px">
+        <b-row no-gutters>
+          <b-col lg="4">
+            <b-card-title style="text-align:left">{{member.name}}</b-card-title>
+          </b-col>
+
+          <b-col lg="8">
+            <b-card-text v-for="paragraph in member.bio.split('\n')" :key="paragraph" style="text-align:left">{{paragraph}}</b-card-text>
+          </b-col>
+        </b-row>
+      </b-card>
+    </b-card-group>
   </div>
 </template>
+
+<script>
+  import { BCard, BCardGroup, BCardText, BCardTitle, BCol, BRow } from 'bootstrap-vue'
+  import 'bootstrap/dist/css/bootstrap.css'
+  import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+  export default {
+    name: 'About',
+    components: {
+      BCard,
+      BCardGroup,
+      BCardText,
+      BCardTitle,
+      BCol,
+      BRow,
+    },
+    data() {
+      return {
+        teamArray: [
+          {
+            name: 'Col. Frantz DeWillis, USAF (Ret.)',
+            bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur, risus mattis aliquam ornare, neque sapien laoreet nibh, eu ornare arcu ligula sit amet lectus. Fusce sit amet ipsum id enim tempor consequat eu varius lacus. Cras rutrum erat quis nunc rutrum, et mollis tellus egestas. Pellentesque a tempus mauris, quis lobortis orci. Nunc faucibus mi vitae lectus condimentum, sed pretium odio vehicula. Duis auctor porta metus ac fermentum. Ut id lacinia eros. Cras mi orci, gravida sed ex at, tempor placerat nisi. Vestibulum varius placerat ligula, ut consequat felis molestie nec. Mauris tempus faucibus tortor, a molestie mi cursus eu. Etiam eleifend massa a mi efficitur suscipit. Proin facilisis ex lorem, non suscipit eros fermentum ac. Vivamus suscipit id justo vel sollicitudin. Nullam et nisl id ipsum finibus consequat sit amet eu turpis.\n' +
+                '\n' +
+                'Morbi euismod lectus non est luctus, vel aliquam tellus mattis. Nullam nec turpis porta mauris dignissim accumsan sit amet pellentesque lorem. Quisque lorem mi, pharetra sit amet dui venenatis, convallis egestas risus. Quisque leo ligula, maximus non aliquet non, bibendum sed urna. Phasellus dictum eros felis, sit amet sollicitudin enim fermentum ut. Morbi volutpat lectus at felis tristique venenatis. Sed porta elementum turpis. Donec aliquet sit amet sem ut suscipit. Maecenas ac ex quis sapien vehicula scelerisque. Maecenas urna neque, efficitur vel tortor id, scelerisque commodo diam. Morbi purus purus, ultricies iaculis cursus eu, auctor vel est. Curabitur vitae faucibus lorem, quis pulvinar libero. Suspendisse ullamcorper sit amet dui nec malesuada.',
+          },
+          {
+            name: 'Leon, US Army (Ret.)',
+            bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis enim sit amet eros mollis posuere. Cras eget dignissim magna. Sed vulputate porta ornare. Aliquam iaculis quam a nisl convallis dapibus. Etiam iaculis velit quis tincidunt sodales. Curabitur ultrices turpis odio. Mauris vitae elit ante. Etiam in mi in diam sodales imperdiet. Donec sagittis facilisis felis. Quisque interdum consequat suscipit. Pellentesque ut aliquam orci. Aliquam in ante at ligula bibendum dapibus eget non nisi.\n' +
+                '\n' +
+                'Ut laoreet rutrum aliquam. Etiam elementum tellus eu magna posuere, eu fermentum est suscipit. Pellentesque eleifend, tellus sed lobortis semper, neque enim cursus ligula, et dictum mauris diam eget mauris. Sed vestibulum metus at purus consectetur sollicitudin. Nulla fringilla maximus tellus, at fringilla lectus aliquet eu. Maecenas finibus tortor at magna imperdiet, a volutpat ex mattis. Proin et pretium quam. Vivamus lorem eros, tempor vel dui in, ultrices aliquet odio. Phasellus sed justo quis felis pellentesque aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut egestas nibh leo, quis molestie diam ultricies ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+          },
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  #main-content {
+    color: white;
+  }
+</style>
