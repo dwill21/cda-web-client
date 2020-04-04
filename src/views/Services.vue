@@ -2,21 +2,21 @@
   <b-container id="main-content">
     <b-row>
       <b-col>
-        <h2>Black Hat</h2>
+        <h2 id="black_hat">Black Hat</h2>
         <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
       </b-col>
     </b-row>
 
     <b-row>
       <b-col>
-        <h2>Price to Win</h2>
+        <h2 id="price_to_win">Price to Win</h2>
         <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
       </b-col>
     </b-row>
 
     <b-row>
       <b-col>
-        <h2>Win/Loss Forensic Analysis</h2>
+        <h2 id="win_loss_forensic_analysis">Win/Loss Forensic Analysis</h2>
         <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
       </b-col>
     </b-row>
@@ -43,7 +43,12 @@
           '\n' +
           'Donec ullamcorper aliquam nibh, eget facilisis nulla viverra ac. Praesent eleifend, magna quis facilisis ultricies, leo metus tincidunt nibh, non rutrum tortor sapien id diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla porttitor metus ut magna lacinia, egestas molestie turpis scelerisque. Cras fringilla nisi ac interdum luctus. Ut a efficitur odio. Proin et lectus eu orci scelerisque tempus. Vivamus non faucibus elit. Sed porta, lorem et semper imperdiet, mauris enim maximus nunc, sed sollicitudin mi risus quis ipsum. Curabitur sodales in diam quis placerat. Donec iaculis luctus ex in vulputate. Nam in rhoncus justo. Mauris ligula nulla, rutrum sit amet fermentum ac, pretium rhoncus dui. Fusce porta vulputate dui, congue interdum ligula pellentesque a.'
       }
-    }
+    },
+    mounted() {
+      if (this.$route.hash) {
+        location.href = this.$route.hash;
+      }
+    },
   }
 </script>
 
