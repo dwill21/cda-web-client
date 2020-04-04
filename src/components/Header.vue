@@ -27,21 +27,20 @@
 </template>
 
 <script>
-  import { BCollapse, BDropdownItem, BNavbar, BNavbarBrand, BNavbarNav, BNavItem, BNavItemDropdown } from 'bootstrap-vue'
+  import { BCollapse, BNavbar, BNavbarBrand } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
-
 
   export default {
     name: "Header",
     components: {
         BCollapse,
-        BDropdownItem,
         BNavbar,
         BNavbarBrand,
-        BNavbarNav,
-        BNavItem,
-        BNavItemDropdown,
+        BDropdownItem: () => import('bootstrap-vue').then(m => m.BDropdownItem),
+        BNavbarNav: () => import('bootstrap-vue').then(m => m.BNavbarNav),
+        BNavItem: () => import('bootstrap-vue').then(m => m.BNavItem),
+        BNavItemDropdown: () => import('bootstrap-vue').then(m => m.BNavItemDropdown),
     },
     data() {
       return {
