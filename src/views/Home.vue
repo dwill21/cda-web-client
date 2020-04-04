@@ -7,11 +7,11 @@
 
       <b-col md="6">
         <b-card-group id="cards" columns>
-          <b-card title="Black Hat" :img-src="require('../assets/data.jpg')" img-alt="Data" overlay class="card" @click="redirect('/services#black_hat')"></b-card>
+          <b-card title="Black Hat" :img-src="require('../assets/data.jpg')" img-alt="Data" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
 
-          <b-card title="Price to Win" :img-src="require('../assets/charts.jpeg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price_to_win')"></b-card>
+          <b-card title="Price to Win" :img-src="require('../assets/charts.jpeg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price-to-win')"></b-card>
 
-          <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/documents.jpeg')" img-alt="Documents" overlay class="card" @click="redirect('/services#win_loss_forensic_analysis')"></b-card>
+          <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/documents.jpeg')" img-alt="Documents" overlay class="card" @click="redirect('/services#win-loss-forensic-analysis')"></b-card>
         </b-card-group>
       </b-col>
     </b-row>

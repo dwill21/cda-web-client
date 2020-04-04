@@ -1,22 +1,24 @@
 <template>
   <b-container id="main-content">
+    <h2 style="padding-top: 90px; text-align: center">What we do</h2>
+
     <b-row>
       <b-col>
-        <h2 id="black_hat">Black Hat</h2>
+        <h2 id="black-hat" class="new-section">Black Hat</h2>
         <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
       </b-col>
     </b-row>
 
     <b-row>
       <b-col>
-        <h2 id="price_to_win">Price to Win</h2>
+        <h2 id="price-to-win" class="new-section">Price to Win</h2>
         <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
       </b-col>
     </b-row>
 
     <b-row>
       <b-col>
-        <h2 id="win_loss_forensic_analysis">Win/Loss Forensic Analysis</h2>
+        <h2 id="win-loss-forensic-analysis" class="new-section">Win/Loss Forensic Analysis</h2>
         <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
       </b-col>
     </b-row>
@@ -59,9 +61,7 @@
     color:white;
   }
 
-  h2 {
-    text-align: left;
-    color: white;
-    padding: 90px 0 40px;
+  .new-section {
+    margin: 40px 0;
   }
 </style>
