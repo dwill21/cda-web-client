@@ -5,21 +5,21 @@
     <b-row>
       <b-col>
         <h2 id="black-hat" class="new-section">Black Hat</h2>
-        <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
+        <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
       </b-col>
     </b-row>
 
     <b-row>
       <b-col>
         <h2 id="price-to-win" class="new-section">Price to Win</h2>
-        <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
+        <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
       </b-col>
     </b-row>
 
     <b-row>
       <b-col>
         <h2 id="win-loss-forensic-analysis" class="new-section">Win/Loss Forensic Analysis</h2>
-        <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
+        <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
       </b-col>
     </b-row>
   </b-container>
