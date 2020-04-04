@@ -8,7 +8,7 @@
     <b-collapse is-nav>
       <b-navbar-nav v-if="windowWidth >= 768" class="ml-auto">
         <b-nav-item href="/services" right>What We Do</b-nav-item>
-        <b-nav-item href="#" right>Our Advantage</b-nav-item>
+        <b-nav-item href="/advantage" right>Our Advantage</b-nav-item>
         <b-nav-item href="/about" right>About</b-nav-item>
         <b-nav-item href="#" right>Contact</b-nav-item>
       </b-navbar-nav>
@@ -18,7 +18,7 @@
           <i class="material-icons menu-button">menu</i>
         </template>
         <b-dropdown-item href="/services" right>What We Do</b-dropdown-item>
-        <b-dropdown-item href="#" right>Our Advantage</b-dropdown-item>
+        <b-dropdown-item href="/advantage" right>Our Advantage</b-dropdown-item>
         <b-dropdown-item href="/about" right>About</b-dropdown-item>
         <b-dropdown-item href="#" right>Contact</b-dropdown-item>
       </b-nav-item-dropdown>

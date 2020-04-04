@@ -1,6 +1,6 @@
 <template>
   <b-container id="main-content">
-    <h2 style="padding-top: 90px; text-align: center">What we do</h2>
+    <h2 style="padding-top:90px; text-align:center">What we do</h2>
 
     <b-row>
       <b-col>
@@ -57,8 +57,8 @@
 <style scoped>
   #main-content {
     min-height: calc(100vh - 110px);
-    text-align:left;
-    color:white;
+    text-align: left;
+    color: white;
   }
 
   .new-section {

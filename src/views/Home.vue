@@ -6,7 +6,7 @@
       </b-col>
 
       <b-col md="6">
-        <b-card-group id="cards" columns>
+        <b-card-group columns style="display:inline">
           <b-card title="Black Hat" :img-src="require('../assets/data.jpg')" img-alt="Data" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
 
           <b-card title="Price to Win" :img-src="require('../assets/charts.jpeg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price-to-win')"></b-card>
@@ -49,10 +49,6 @@ export default {
 
   .emphasis {
     color: mediumspringgreen;
-  }
-
-  #cards {
-    display: inline;
   }
 
   .card {
