@@ -25,6 +25,11 @@ const routes = [
     name: 'Advantage',
     component: () => import('../views/Advantage.vue')
   },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
+  },
 ];
 
 const router = new VueRouter({
