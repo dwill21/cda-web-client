@@ -4,10 +4,30 @@
       <b-col cols="9" md="5" lg="4" xl="3">
         <b-card title="Contact us" text-variant="white" style="background:transparent; border:none">
           <div style="padding:15px"></div>
-          <b-card-text align="left"><i class="material-icons" style="font-size:22px; padding:0 4px">mail</i> foo@example.com</b-card-text>
-          <b-card-text align="left"><img src="../assets/Twitter_Logo_Blue.png" alt="Twitter Logo"> twitter.com/foo</b-card-text>
-          <b-card-text align="left"><img src="../assets/f_logo_RGB-Blue_58.png" alt="Facebook Logo"> facebook.com/foo</b-card-text>
-          <b-card-text align="left"><img src="../assets/LI-In-Bug.png" alt="LinkedIn Logo"> linkedin.com/foo</b-card-text>
+
+          <b-card-text align="left">
+            <b-link href="mailto:foo@example.com" target="_blank">
+              <i class="material-icons" style="font-size:22px; padding:0 4px">mail</i> foo@example.com
+            </b-link>
+          </b-card-text>
+
+          <b-card-text align="left">
+            <b-link href="http://twitter.com/foo" target="_blank">
+              <img src="../assets/Twitter_Logo_Blue.png" alt="Twitter Logo"> twitter.com/foo
+            </b-link>
+          </b-card-text>
+
+          <b-card-text align="left">
+            <b-link href="http://facebook.com/foo" target="_blank">
+              <img src="../assets/f_logo_RGB-Blue_58.png" alt="Facebook Logo"> facebook.com/foo
+            </b-link>
+          </b-card-text>
+
+          <b-card-text align="left">
+            <b-link href="http://linkedin.com/foo" target="_blank">
+              <img src="../assets/LI-In-Bug.png" alt="LinkedIn Logo"> linkedin.com/foo
+            </b-link>
+          </b-card-text>
         </b-card>
       </b-col>
     </b-row>
@@ -15,7 +35,7 @@
 </template>
 
 <script>
-  import { BContainer, BRow, BCol, BCard, BCardText } from 'bootstrap-vue'
+  import { BContainer, BRow, BCol, BCard, BCardText, BLink } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -27,6 +47,7 @@
       BCol,
       BCard,
       BCardText,
+      BLink,
     }
   }
 </script>
@@ -43,5 +64,9 @@
 
   h4 {
     font-size: 2rem;
+  }
+
+  a {
+    color: white;
   }
 </style>
