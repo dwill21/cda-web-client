@@ -7,7 +7,7 @@
 
           <b-card-text align="left">
             <b-link href="mailto:foo@example.com" target="_blank">
-              <i class="material-icons" style="font-size:22px; padding:0 4px">mail</i> foo@example.com
+              <i class="material-icons text-icon">mail</i> foo@example.com
             </b-link>
           </b-card-text>
 
@@ -55,7 +55,7 @@
 <style scoped>
   img {
     height: 30px;
-    widtH: 30px;
+    width: 30px;
   }
 
   p {
@@ -68,5 +68,11 @@
 
   a {
     color: white;
+  }
+
+  .text-icon {
+    font-size: 24px;
+    padding: 0 3px;
+    vertical-align: middle;
   }
 </style>

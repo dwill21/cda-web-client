@@ -72,7 +72,7 @@
   }
 
   .menu-button {
-    padding-top: 9px;
+    vertical-align: middle;
     font-size: 30px;
     color: white;
   }
