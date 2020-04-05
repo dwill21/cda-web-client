@@ -7,11 +7,11 @@
 
       <b-col md="6">
         <b-card-group columns style="display:inline">
-          <b-card title="Black Hat" :img-src="require('../assets/data.jpg')" img-alt="Data" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
+          <b-card title="Black Hat" :img-src="require('../assets/neon_question_mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
 
-          <b-card title="Price to Win" :img-src="require('../assets/charts.jpeg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price-to-win')"></b-card>
+          <b-card title="Price to Win" :img-src="require('../assets/data.jpg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price-to-win')"></b-card>
 
-          <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/documents.jpeg')" img-alt="Documents" overlay class="card" @click="redirect('/services#win-loss-forensic-analysis')"></b-card>
+          <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" overlay class="card" @click="redirect('/services#win-loss-forensic-analysis')"></b-card>
         </b-card-group>
       </b-col>
     </b-row>

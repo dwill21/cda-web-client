@@ -9,7 +9,7 @@
       <b-navbar-nav v-if="windowWidth >= 768" class="ml-auto">
         <b-nav-item href="/services" right>What We Do</b-nav-item>
         <b-nav-item href="/advantage" right>Our Advantage</b-nav-item>
-        <b-nav-item href="/about" right>About</b-nav-item>
+        <b-nav-item href="/about" right>Our Team</b-nav-item>
         <b-nav-item href="/contact" right>Contact</b-nav-item>
       </b-navbar-nav>
 
@@ -19,7 +19,7 @@
         </template>
         <b-dropdown-item href="/services" right>What We Do</b-dropdown-item>
         <b-dropdown-item href="/advantage" right>Our Advantage</b-dropdown-item>
-        <b-dropdown-item href="/about" right>About</b-dropdown-item>
+        <b-dropdown-item href="/about" right>Our Team</b-dropdown-item>
         <b-dropdown-item href="/contact" right>Contact</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-collapse>
