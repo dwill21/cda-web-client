@@ -7,10 +7,17 @@
 
     <b-collapse is-nav>
       <b-navbar-nav v-if="windowWidth >= 768" class="ml-auto">
-        <b-nav-item href="/services" right>What We Do</b-nav-item>
-        <b-nav-item href="/advantage" right>Our Advantage</b-nav-item>
-        <b-nav-item href="/about" right>Our Team</b-nav-item>
-        <b-nav-item href="/contact" right>Contact</b-nav-item>
+        <b-nav-item href="/services">What We Do</b-nav-item>
+        <b-nav-item href="/advantage">Our Advantage</b-nav-item>
+        <b-nav-item href="/about">Our Team</b-nav-item>
+        <b-nav-item href="/contact">Contact</b-nav-item>
+
+        <b-nav-item-dropdown right>
+          <template v-slot:button-content>
+            <i class="material-icons">account_circle</i>
+          </template>
+          <b-dropdown-item v-if="!isSignedIn" href="/login">Log In/Sign Up</b-dropdown-item>
+        </b-nav-item-dropdown>
       </b-navbar-nav>
 
       <b-nav-item-dropdown v-else class="ml-auto" right no-caret>
@@ -21,13 +28,14 @@
         <b-dropdown-item href="/advantage" right>Our Advantage</b-dropdown-item>
         <b-dropdown-item href="/about" right>Our Team</b-dropdown-item>
         <b-dropdown-item href="/contact" right>Contact</b-dropdown-item>
+        <b-dropdown-item v-if="!isSignedIn" href="/login">Log In/Sign Up</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-collapse>
   </b-navbar>
 </template>
 
 <script>
-  import { BCollapse, BNavbar, BNavbarBrand } from 'bootstrap-vue'
+  import { BCollapse, BNavbar, BNavbarBrand, BNavItemDropdown, BDropdownItem } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -37,14 +45,15 @@
         BCollapse,
         BNavbar,
         BNavbarBrand,
-        BDropdownItem: () => import('bootstrap-vue').then(m => m.BDropdownItem),
+        BNavItemDropdown,
+        BDropdownItem,
         BNavbarNav: () => import('bootstrap-vue').then(m => m.BNavbarNav),
         BNavItem: () => import('bootstrap-vue').then(m => m.BNavItem),
-        BNavItemDropdown: () => import('bootstrap-vue').then(m => m.BNavItemDropdown),
     },
     data() {
       return {
         windowWidth: window.innerWidth,
+        isSignedIn: false,
       }
     },
     mounted() {
@@ -71,8 +80,11 @@
     list-style-type: none;
   }
 
-  .menu-button {
+  i {
     vertical-align: middle;
+  }
+
+  .menu-button {
     font-size: 30px;
     color: white;
   }
