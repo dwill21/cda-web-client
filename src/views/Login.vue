@@ -12,7 +12,8 @@
 
             <b-button style="margin-top:10px" type="submit" variant="primary" :disabled="isBlank(email) || isBlank(password)" pill block>Log in</b-button>
           </b-form>
-          <p>Don't have an account yet? <a href="/sign-up">Sign up</a></p>
+
+          <p>Don't have an account yet? <router-link to="/sign-up">Sign up</router-link></p>
         </b-card>
       </b-col>
     </b-row>
@@ -56,5 +57,9 @@
 
   input {
     margin: 5px 0;
+  }
+
+  a {
+    color: #3A99FC;
   }
 </style>

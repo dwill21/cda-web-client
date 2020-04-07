@@ -31,6 +31,8 @@
 
           <b-button style="margin:20px 0" type="submit" variant="primary" :disabled="!isValidSignup()" pill block>Sign up</b-button>
         </b-form>
+
+        <p style="color:white">Already have an account? <router-link to="/login">Log in</router-link></p>
       </b-col>
     </b-row>
   </b-container>
@@ -82,6 +84,10 @@
 <style scoped>
   form {
     color: white;
+  }
+
+  a {
+    color: #3A99FC;
   }
 
   .negative-space {

@@ -7,17 +7,17 @@
 
     <b-collapse is-nav>
       <b-navbar-nav v-if="windowWidth >= 768" class="ml-auto">
-        <b-nav-item href="/services">What We Do</b-nav-item>
-        <b-nav-item href="/advantage">Our Advantage</b-nav-item>
-        <b-nav-item href="/about">Our Team</b-nav-item>
-        <b-nav-item href="/contact">Contact</b-nav-item>
+        <b-nav-item to="/services">What We Do</b-nav-item>
+        <b-nav-item to="/advantage">Our Advantage</b-nav-item>
+        <b-nav-item to="/about">Our Team</b-nav-item>
+        <b-nav-item to="/contact">Contact</b-nav-item>
 
         <b-nav-item-dropdown right>
           <template v-slot:button-content>
             <i class="material-icons">account_circle</i>
           </template>
-          <b-dropdown-item v-if="!isSignedIn" href="/sign-up">Sign Up</b-dropdown-item>
-          <b-dropdown-item v-if="!isSignedIn" href="/login">Log In</b-dropdown-item>
+          <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
+          <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
 
@@ -25,12 +25,12 @@
         <template v-slot:button-content>
           <i class="material-icons menu-button">menu</i>
         </template>
-        <b-dropdown-item href="/services" right>What We Do</b-dropdown-item>
-        <b-dropdown-item href="/advantage" right>Our Advantage</b-dropdown-item>
-        <b-dropdown-item href="/about" right>Our Team</b-dropdown-item>
-        <b-dropdown-item href="/contact" right>Contact</b-dropdown-item>
-        <b-dropdown-item v-if="!isSignedIn" href="/sign-up">Sign Up</b-dropdown-item>
-        <b-dropdown-item v-if="!isSignedIn" href="/login">Log In</b-dropdown-item>
+        <b-dropdown-item to="/services" right>What We Do</b-dropdown-item>
+        <b-dropdown-item to="/advantage" right>Our Advantage</b-dropdown-item>
+        <b-dropdown-item to="/about" right>Our Team</b-dropdown-item>
+        <b-dropdown-item to="/contact" right>Contact</b-dropdown-item>
+        <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
+        <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-collapse>
   </b-navbar>
