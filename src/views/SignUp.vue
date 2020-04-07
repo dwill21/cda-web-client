@@ -2,6 +2,8 @@
   <b-container>
     <b-row align-v="center" align-h="center" class="h-100" style="min-height: calc(100vh - 110px)">
       <b-col lg="10" xl="8">
+        <h2 style="color:white; margin:40px 0">Sign up for an account</h2>
+
         <b-form>
           <b-form-group label="First Name" label-for="first-name" label-cols-md="3" label-size="lg" label-align-md="left">
             <b-form-input v-model="firstName" id="first-name" placeholder="John" size="lg" required></b-form-input>
@@ -32,7 +34,7 @@
           <b-button style="margin:20px 0" type="submit" variant="primary" :disabled="!isValidSignup()" pill block>Sign up</b-button>
         </b-form>
 
-        <p style="color:white">Already have an account? <router-link to="/login">Log in</router-link></p>
+        <p style="color:white; margin-bottom: 30px">Already have an account? <router-link to="/login">Log in</router-link></p>
       </b-col>
     </b-row>
   </b-container>
