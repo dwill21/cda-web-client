@@ -16,7 +16,8 @@
           <template v-slot:button-content>
             <i class="material-icons">account_circle</i>
           </template>
-          <b-dropdown-item v-if="!isSignedIn" href="/login">Log In/Sign Up</b-dropdown-item>
+          <b-dropdown-item v-if="!isSignedIn" href="/sign-up">Sign Up</b-dropdown-item>
+          <b-dropdown-item v-if="!isSignedIn" href="/login">Log In</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
 
@@ -28,7 +29,8 @@
         <b-dropdown-item href="/advantage" right>Our Advantage</b-dropdown-item>
         <b-dropdown-item href="/about" right>Our Team</b-dropdown-item>
         <b-dropdown-item href="/contact" right>Contact</b-dropdown-item>
-        <b-dropdown-item v-if="!isSignedIn" href="/login">Log In/Sign Up</b-dropdown-item>
+        <b-dropdown-item v-if="!isSignedIn" href="/sign-up">Sign Up</b-dropdown-item>
+        <b-dropdown-item v-if="!isSignedIn" href="/login">Log In</b-dropdown-item>
       </b-nav-item-dropdown>
     </b-collapse>
   </b-navbar>
