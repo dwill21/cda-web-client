@@ -12,13 +12,14 @@
         <b-nav-item to="/about">Our Team</b-nav-item>
         <b-nav-item to="/contact">Contact</b-nav-item>
 
+        <!-- No features ready yet that need login page
         <b-nav-item-dropdown right>
           <template v-slot:button-content>
             <i class="material-icons">account_circle</i>
           </template>
           <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
           <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown> -->
       </b-navbar-nav>
 
       <b-nav-item-dropdown v-else class="ml-auto" right no-caret>
@@ -29,8 +30,9 @@
         <b-dropdown-item to="/advantage" right>Our Advantage</b-dropdown-item>
         <b-dropdown-item to="/about" right>Our Team</b-dropdown-item>
         <b-dropdown-item to="/contact" right>Contact</b-dropdown-item>
+        <!-- No features ready yet that need login page
         <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
-        <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item>
+        <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item> -->
       </b-nav-item-dropdown>
     </b-collapse>
   </b-navbar>
@@ -55,7 +57,7 @@
     data() {
       return {
         windowWidth: window.innerWidth,
-        isSignedIn: false,
+        // isSignedIn: false,
       }
     },
     mounted() {

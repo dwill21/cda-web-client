@@ -30,6 +30,7 @@ const routes = [
     name: 'Contact',
     component: () => import('../views/Contact.vue')
   },
+  /* No features ready yet that need user logged in
   {
     path: '/login',
     name: 'Login',
@@ -40,6 +41,7 @@ const routes = [
     name: 'Sign up',
     component: () => import('../views/SignUp.vue')
   },
+   */
 ];
 
 const router = new VueRouter({
