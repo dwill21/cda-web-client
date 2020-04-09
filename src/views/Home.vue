@@ -7,7 +7,7 @@
 
       <b-col md="6">
         <b-card-group columns style="display:inline">
-          <b-card title="Black Hat" :img-src="require('../assets/neon_question_mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
+          <b-card title="Black Hat" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
 
           <b-card title="Price to Win" :img-src="require('../assets/data.jpg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price-to-win')"></b-card>
 

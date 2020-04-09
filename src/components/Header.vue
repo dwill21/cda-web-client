@@ -1,8 +1,7 @@
 <template>
   <b-navbar type="dark" variant="dark">
     <b-navbar-brand href="/">
-      <img src="../assets/knight-white.png" class="d-inline-block align-top logo" alt="Logo">
-      <span v-if="windowWidth >= 768">Competitive Data Analytics</span>
+      <img src="../assets/full-logo.png" alt="Full logo" class="d-inline-block align-top logo">
     </b-navbar-brand>
 
     <b-collapse is-nav>
@@ -77,7 +76,6 @@
 <style scoped>
   .logo {
     height: 30px;
-    width: 30px;
   }
 
   li {
