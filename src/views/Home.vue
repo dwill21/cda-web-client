@@ -7,11 +7,11 @@
 
       <b-col md="6">
         <b-card-group columns style="display:inline">
-          <b-card title="Black Hat" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" overlay class="card" @click="redirect('/services#black-hat')"></b-card>
+          <HoverCard title="Black Hat" :description="dummyText" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" @click.native="redirect('/services#black-hat')"></HoverCard>
 
-          <b-card title="Price to Win" :img-src="require('../assets/data.jpg')" img-alt="Charts" overlay class="card" @click="redirect('/services#price-to-win')"></b-card>
+          <HoverCard title="Price to Win" :description="dummyText" :img-src="require('../assets/data.jpg')" img-alt="Data" @click.native="redirect('/services#price-to-win')"></HoverCard>
 
-          <b-card title="Win/Loss Forensic Analysis" :img-src="require('../assets/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" overlay class="card" @click="redirect('/services#win-loss-forensic-analysis')"></b-card>
+          <HoverCard title="Win/Loss Forensic Analysis" :description="dummyText" :img-src="require('../assets/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" @click.native="redirect('/services#win-loss-forensic-analysis')"></HoverCard>
         </b-card-group>
       </b-col>
     </b-row>
@@ -19,25 +19,31 @@
 </template>
 
 <script>
-import { BCard, BCardGroup, BCol, BRow, BContainer } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+  import HoverCard from "../components/HoverCard.vue";
+  import { BCardGroup, BCol, BRow, BContainer } from 'bootstrap-vue'
+  import 'bootstrap/dist/css/bootstrap.css'
+  import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-export default {
-  name: 'Home',
-  components: {
-    BCard,
-    BCardGroup,
-    BCol,
-    BRow,
-    BContainer,
-  },
-  methods: {
-    redirect(to) {
-      this.$router.push(to);
+  export default {
+    name: 'Home',
+    components: {
+      BCardGroup,
+      BCol,
+      BRow,
+      BContainer,
+      HoverCard,
+    },
+    data() {
+      return {
+        dummyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue, erat ut vehicula mollis, sem lacus pellentesque leo, non posuere lacus erat ac ante. Suspendisse bibendum mi sit amet nisi.",
+      }
+    },
+    methods: {
+      redirect(to) {
+        this.$router.push(to);
+      },
     }
   }
-}
 </script>
 
 <style scoped>
