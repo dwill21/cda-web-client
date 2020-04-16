@@ -13,19 +13,19 @@
 
           <b-card-text align="left">
             <b-link href="http://twitter.com/foo" target="_blank">
-              <img src="src/assets/twitter-icon.png" alt="Twitter Logo"> twitter.com/foo
+              <img src="../assets/twitter-icon.png" alt="Twitter Logo"> twitter.com/foo
             </b-link>
           </b-card-text>
 
           <b-card-text align="left">
             <b-link href="http://facebook.com/foo" target="_blank">
-              <img src="src/assets/facebook-icon.png" alt="Facebook Logo"> facebook.com/foo
+              <img src="../assets/facebook-icon.png" alt="Facebook Logo"> facebook.com/foo
             </b-link>
           </b-card-text>
 
           <b-card-text align="left">
             <b-link href="http://linkedin.com/foo" target="_blank">
-              <img src="src/assets/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/foo
+              <img src="../assets/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/foo
             </b-link>
           </b-card-text>
         </b-card>

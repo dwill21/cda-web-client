@@ -5,9 +5,9 @@
     <b-card-group style="display:block">
       <b-card v-for="member in teamArray" :key="member.name" bg-variant="secondary" style="margin-bottom:20px">
         <b-row no-gutters>
-          <b-col lg="4">
-            <b-card-title style="text-align:left">{{member.name}}</b-card-title>
-            <b-card-img :src="require('../assets/avatar-placeholder.png')" style="height:25vmin; width:25vmin"></b-card-img>
+          <b-col lg="4" class="my-lg-auto">
+            <b-card-title>{{member.name}}</b-card-title>
+            <b-card-img :src="require('../assets/avatar-placeholder.png')" class="avatar my-lg-0 my-3"></b-card-img>
           </b-col>
 
           <b-col lg="8">
@@ -60,5 +60,11 @@
   #main-content {
     min-height: calc(100vh - 110px);
     color: white;
+  }
+
+  .avatar {
+    height:25vmin;
+    width:25vmin;
+    border-radius: 50%;
   }
 </style>
