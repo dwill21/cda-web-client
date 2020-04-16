@@ -51,6 +51,7 @@
     text-align: left;
     font-size: 40px;
     color: white;
+    text-shadow: 1px 1px black;
   }
 
   .emphasis {

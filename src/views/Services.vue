@@ -2,24 +2,39 @@
   <b-container id="main-content">
     <h2 style="padding-top:90px; text-align:center">What we do</h2>
 
-    <b-row>
-      <b-col>
-        <h2 id="black-hat" class="new-section">Black Hat</h2>
-        <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
+    <b-row id="black-hat" class="section">
+      <b-col lg="4" class="py-2 mt-lg-0 py-lg-auto title-col">
+        <h2 class="title">Black Hat</h2>
+      </b-col>
+
+      <b-col lg="8" class="text-col pt-lg-2">
+        <div class="text px-xl-2 px-lg-3">
+          <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
+        </div>
       </b-col>
     </b-row>
 
-    <b-row>
-      <b-col>
-        <h2 id="price-to-win" class="new-section">Price to Win</h2>
-        <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
+    <b-row id="price-to-win" class="section">
+      <b-col lg="4" class="py-2 py-lg-auto title-col order-1 order-lg-2">
+        <h2 class="title text-left text-lg-right">Price to Win</h2>
+      </b-col>
+
+      <b-col lg="8" class="text-col pt-lg-2 order-2 order-lg-1">
+        <div class="text px-xl-3 px-lg-4">
+          <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
+        </div>
       </b-col>
     </b-row>
 
-    <b-row>
-      <b-col>
-        <h2 id="win-loss-forensic-analysis" class="new-section">Win/Loss Forensic Analysis</h2>
-        <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
+    <b-row id="win-loss-forensic-analysis" class="section">
+      <b-col lg="4" class="py-2 py-lg-auto title-col">
+        <h2 class="title">Win/Loss Forensic Analysis</h2>
+      </b-col>
+
+      <b-col lg="8" class="text-col pt-lg-2">
+        <div class="text px-xl-2 px-lg-3">
+          <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
+        </div>
       </b-col>
     </b-row>
   </b-container>
@@ -55,13 +70,42 @@
 </script>
 
 <style scoped>
+  h2 {
+    text-shadow: 1px 1px black;
+  }
+
   #main-content {
     min-height: calc(100vh - 110px);
     text-align: left;
     color: white;
   }
 
-  .new-section {
+  .section {
     margin: 40px 0;
+  }
+
+  .text-col {
+    background: #867167;
+  }
+
+  .title-col {
+    border: 5px solid #867167;
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      transform: skew(-5deg);
+    }
+
+    .title {
+      position: relative;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) skew(5deg);
+    }
+
+    .text {
+      transform: skew(5deg);
+    }
   }
 </style>

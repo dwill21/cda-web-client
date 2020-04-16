@@ -1,9 +1,9 @@
 <template>
-  <div id="main-content">
+  <div id="main-content" class="mx-auto">
     <h2 style="padding: 90px 0 40px">Meet our team</h2>
 
     <b-card-group style="display:block">
-      <b-card v-for="member in teamArray" :key="member.name" bg-variant="secondary" style="margin-bottom:20px">
+      <b-card v-for="member in teamArray" :key="member.name" style="margin-bottom:20px; background:#867167">
         <b-row no-gutters>
           <b-col lg="4" class="my-lg-auto">
             <b-card-title>{{member.name}}</b-card-title>
@@ -57,8 +57,13 @@
 </script>
 
 <style scoped>
+  h2, h4 {
+    text-shadow: 1px 1px black;
+  }
+
   #main-content {
     min-height: calc(100vh - 110px);
+    width: 80%;
     color: white;
   }
 
