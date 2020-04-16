@@ -1,8 +1,8 @@
 <template>
   <div id="main-content" class="mx-auto">
-    <h2 style="padding: 90px 0 40px">Meet our team</h2>
+    <h2 style="padding: 90px 0 60px">Meet our team</h2>
 
-    <b-card-group style="display:block">
+    <b-card-group style="display:block" data-aos="fade-right" data-aos-duration="1000">
       <b-card v-for="member in teamArray" :key="member.name" style="margin-bottom:20px; background:#867167">
         <b-row no-gutters>
           <b-col lg="4" class="my-lg-auto">

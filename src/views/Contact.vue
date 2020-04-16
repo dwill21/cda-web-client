@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container data-aos="zoom-out" data-aos-duration="800">
     <b-row align-v="center" align-h="center" class="h-100" style="min-height: calc(100vh - 110px)">
       <b-col cols="9" md="5" lg="4" xl="3">
         <b-card title="Contact us" text-variant="white" style="background:transparent; border:none">

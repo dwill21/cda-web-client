@@ -2,7 +2,7 @@
   <b-container id="main-content">
     <h2 style="padding-top:90px; text-align:center">What we do</h2>
 
-    <b-row id="black-hat" class="section">
+    <b-row id="black-hat" class="section" data-aos="fade-right" data-aos-duration="1000">
       <b-col lg="4" class="py-2 mt-lg-0 py-lg-auto title-col">
         <h2 class="title">Black Hat</h2>
       </b-col>
@@ -14,7 +14,7 @@
       </b-col>
     </b-row>
 
-    <b-row id="price-to-win" class="section">
+    <b-row id="price-to-win" class="section" data-aos="fade-right" data-aos-duration="1000">
       <b-col lg="4" class="py-2 py-lg-auto title-col order-1 order-lg-2">
         <h2 class="title text-left text-lg-right">Price to Win</h2>
       </b-col>
@@ -26,7 +26,7 @@
       </b-col>
     </b-row>
 
-    <b-row id="win-loss-forensic-analysis" class="section">
+    <b-row id="win-loss-forensic-analysis" class="section" data-aos="fade-right" data-aos-duration="1000">
       <b-col lg="4" class="py-2 py-lg-auto title-col">
         <h2 class="title">Win/Loss Forensic Analysis</h2>
       </b-col>
@@ -81,7 +81,7 @@
   }
 
   .section {
-    margin: 40px 0;
+    margin: 60px 0;
   }
 
   .text-col {
@@ -93,19 +93,10 @@
   }
 
   @media (min-width: 992px) {
-    .section {
-      transform: skew(-5deg);
-    }
-
     .title {
       position: relative;
       top: 50%;
       left: 0;
-      transform: translateY(-50%) skew(5deg);
-    }
-
-    .text {
-      transform: skew(5deg);
     }
   }
 </style>

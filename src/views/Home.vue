@@ -1,11 +1,11 @@
 <template>
   <b-container>
     <b-row align-v="center" class="h-100" style="min-height: calc(100vh - 110px)">
-      <b-col md="6">
+      <b-col md="6" data-aos="fade-right" data-aos-duration="1500">
         <h2 id="tagline">Power your business development with <span class="emphasis">data-driven decisions</span></h2>
       </b-col>
 
-      <b-col md="6">
+      <b-col md="6" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
         <b-card-group columns style="display:inline">
           <HoverCard title="Black Hat" :description="dummyText" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" @click.native="redirect('/services#black-hat')"></HoverCard>
 
