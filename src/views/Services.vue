@@ -92,7 +92,7 @@
     border: 5px solid #867167;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 992px) {
     .section {
       transform: skew(-5deg);
     }

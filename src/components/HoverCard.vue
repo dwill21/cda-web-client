@@ -50,7 +50,7 @@
   }
 
   .description {
-    background: #343a40;
+    background: #867167;
     border-radius: 3px;
   }
 </style>
