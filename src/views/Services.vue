@@ -1,38 +1,35 @@
 <template>
-  <b-container id="main-content">
-    <h2 style="padding-top:90px; text-align:center">What we do</h2>
+  <b-container id="main-content" fluid>
+    <h2 style="padding:90px 0 50px">Capturing the competitive edge</h2>
 
-    <b-row id="black-hat" class="section" data-aos="fade-right" data-aos-duration="1000">
-      <b-col lg="4" class="py-2 mt-lg-0 py-lg-auto title-col">
-        <h2 class="title">Black Hat</h2>
-      </b-col>
+    <b-row id="black-hat" class="section rounded" data-aos="fade-right" data-aos-duration="1000" align-h="end">
+      <img class="img-overlay" src="../assets/v-22-osprey.jpg" alt="V-22 Osprey"/>
 
-      <b-col lg="8" class="text-col pt-lg-2">
-        <div class="text px-xl-2 px-lg-3">
+      <b-col lg="7" class="text pt-2 m-md-4 rounded">
+        <h2 class="my-3">Black Hat</h2>
+        <div>
           <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
         </div>
       </b-col>
     </b-row>
 
-    <b-row id="price-to-win" class="section" data-aos="fade-right" data-aos-duration="1000">
-      <b-col lg="4" class="py-2 py-lg-auto title-col order-1 order-lg-2">
-        <h2 class="title text-left text-lg-right">Price to Win</h2>
-      </b-col>
+    <b-row id="price-to-win" class="section rounded" data-aos="fade-right" data-aos-duration="1000">
+      <img class="img-overlay" src="../assets/mobile-radar.jpg" alt="Mobile radar"/>
 
-      <b-col lg="8" class="text-col pt-lg-2 order-2 order-lg-1">
-        <div class="text px-xl-3 px-lg-4">
+      <b-col lg="7" class="text pt-2 m-md-4 rounded">
+        <h2 class="my-3">Price to Win</h2>
+        <div>
           <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
         </div>
       </b-col>
     </b-row>
 
-    <b-row id="win-loss-forensic-analysis" class="section" data-aos="fade-right" data-aos-duration="1000">
-      <b-col lg="4" class="py-2 py-lg-auto title-col">
-        <h2 class="title">Win/Loss Forensic Analysis</h2>
-      </b-col>
+    <b-row id="win-loss-forensic-analysis" class="section rounded" data-aos="fade-right" data-aos-duration="1000" align-h="end">
+      <img class="img-overlay" src="../assets/field-laptop.jpg" alt="Field laptop"/>
 
-      <b-col lg="8" class="text-col pt-lg-2">
-        <div class="text px-xl-2 px-lg-3">
+      <b-col lg="7" class="text pt-2 m-md-4 rounded">
+        <h2 class="my-3">Win/Loss Forensic Analysis</h2>
+        <div>
           <p v-for="(paragraph, index) in defaultText.split('\n')" :key="index">{{paragraph}}</p>
         </div>
       </b-col>
@@ -72,32 +69,38 @@
 <style scoped>
   h2 {
     text-shadow: 1px 1px black;
+    text-align: center;
   }
 
   #main-content {
     min-height: calc(100vh - 110px);
+    padding: 0;
     text-align: left;
     color: white;
   }
 
   .section {
-    margin: 60px 0;
+    margin: 40px 0;
+    overflow: hidden;
   }
 
-  .text-col {
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+
+  .text {
     background: #867167;
+    opacity: 0.9;
   }
 
-  .title-col {
-    border: 5px solid #867167;
-  }
-
-  @media (min-width: 992px) {
-    .title {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
+  @media (max-width: 767px) {
+    .img-overlay {
+      display: none;
     }
   }
 </style>
