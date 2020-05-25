@@ -3,7 +3,7 @@
     <transition name="fade">
       <div v-if="isDescriptionVisible" class="card-img-overlay description">
         <b-card-title>{{title}}</b-card-title>
-        <b-card-text>{{description}}</b-card-text>
+        <b-card-text style="line-height: 1.2">{{description}}</b-card-text>
       </div>
     </transition>
   </b-card>

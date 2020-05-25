@@ -7,11 +7,11 @@
 
       <b-col md="6" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
         <b-card-group columns style="display:inline">
-          <HoverCard title="Black Hat" :description="dummyText" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" @click.native="redirect('/services#black-hat')"></HoverCard>
+          <HoverCard title="Black Hat" :description="blackHat" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" @click.native="redirect('/services#products')"></HoverCard>
 
-          <HoverCard title="Price to Win" :description="dummyText" :img-src="require('../assets/data.jpg')" img-alt="Data" @click.native="redirect('/services#price-to-win')"></HoverCard>
+          <HoverCard title="Price to Win" :description="priceToWin" :img-src="require('../assets/data.jpg')" img-alt="Data" @click.native="redirect('/services#products')"></HoverCard>
 
-          <HoverCard title="Win/Loss Forensic Analysis" :description="dummyText" :img-src="require('../assets/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" @click.native="redirect('/services#win-loss-forensic-analysis')"></HoverCard>
+          <HoverCard title="Win/Loss Forensic Analysis" :description="forensicAnalysis" :img-src="require('../assets/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" @click.native="redirect('/services#products')"></HoverCard>
         </b-card-group>
       </b-col>
     </b-row>
@@ -35,7 +35,17 @@
     },
     data() {
       return {
-        dummyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue, erat ut vehicula mollis, sem lacus pellentesque leo, non posuere lacus erat ac ante. Suspendisse bibendum mi sit amet nisi.",
+        blackHat: 'We collect open source competitive intelligence on desired\n' +
+          'competitors, present it to, and facilitate, a client-participant CDA Black Hat process and model that\n' +
+          'produces 1) predicted competition outcome and 2) alternative win strategies that increase probability of\n' +
+          'win.',
+        priceToWin: 'We collect open source competitive intelligence data to populate our predictive\n' +
+          'models to provide a client most-likely competitor bid prices, best value scores, and Probability of Win.\n' +
+          'We also provide bid aggressiveness targets for client bid decision-maker consideration.',
+        forensicAnalysis: 'We analyze client wins and losses through our objective framework to\n' +
+          'determine how and why your company won or lost a pursuit. This aids a client in determining what has\n' +
+          'worked and what has not, free from the natural, inherent bias of solely using internal company\n' +
+          'personnel.'
       }
     },
     methods: {

@@ -7,8 +7,7 @@
     <b-collapse is-nav>
       <b-navbar-nav v-if="windowWidth >= 768" class="ml-auto">
         <b-nav-item to="/services">What We Do</b-nav-item>
-        <b-nav-item to="/advantage">Our Advantage</b-nav-item>
-        <b-nav-item to="/about">Our Team</b-nav-item>
+        <b-nav-item to="/about">Who We Are</b-nav-item>
         <b-nav-item to="/contact">Contact</b-nav-item>
 
         <!-- No features ready yet that need login page
@@ -26,8 +25,7 @@
           <i class="material-icons menu-button">menu</i>
         </template>
         <b-dropdown-item to="/services" right>What We Do</b-dropdown-item>
-        <b-dropdown-item to="/advantage" right>Our Advantage</b-dropdown-item>
-        <b-dropdown-item to="/about" right>Our Team</b-dropdown-item>
+        <b-dropdown-item to="/about" right>Who We Are</b-dropdown-item>
         <b-dropdown-item to="/contact" right>Contact</b-dropdown-item>
         <!-- No features ready yet that need login page
         <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
