@@ -1,6 +1,6 @@
 <template>
   <b-container id="main-content" fluid>
-    <h2 style="padding:90px 0 50px">Capturing the competitive edge</h2>
+    <h2 style="padding:90px 0 50px">Capturing the Competitive Edge</h2>
 
     <b-row id="black-hat" class="section rounded" data-aos="fade-right" data-aos-duration="1000" align-h="end">
       <img class="img-overlay" src="../assets/v-22-osprey.jpg" alt="V-22 Osprey"/>

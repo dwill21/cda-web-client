@@ -1,6 +1,6 @@
 <template>
   <div id="main-content">
-    <h2 style="padding:90px 0 40px; text-align:center; text-shadow: 1px 1px black">Our advantage</h2>
+    <h2 style="padding:90px 0 40px; text-align:center; text-shadow: 1px 1px black">Our Advantage</h2>
     <div>
       <p v-for="paragraph in defaultText.split('\n')" :key="paragraph">{{paragraph}}</p>
     </div>

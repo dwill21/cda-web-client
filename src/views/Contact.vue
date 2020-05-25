@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-v="center" align-h="center" class="h-100" style="min-height: calc(100vh - 110px)">
       <b-col cols="9" md="5" lg="4" xl="3">
-        <b-card title="Contact us" text-variant="white" style="background:transparent; border:none">
+        <b-card title="Contact Us" text-variant="white" style="background:transparent; border:none">
           <div style="padding:15px"></div>
 
           <b-card-text align="left">

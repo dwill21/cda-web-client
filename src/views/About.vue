@@ -1,6 +1,6 @@
 <template>
   <div id="main-content" class="mx-auto">
-    <h2 style="padding: 90px 0 60px">Meet our team</h2>
+    <h2 style="padding: 90px 0 60px">Meet Our Team</h2>
 
     <b-card-group style="display:block">
       <b-card v-for="member in teamArray" :key="member.name" style="margin-bottom:20px; background:#867167">
