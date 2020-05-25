@@ -9,7 +9,13 @@
       </b-card>
 
       <b-card title="CEO Experience" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
-        <b-card-text v-for="line in ceoExperience.split('\n')" :key="line">{{line}}</b-card-text>
+        <b-card-text v-for="line in ceoExperience.split('\n')" :key="line" class="mt-3">{{line}}</b-card-text>
+      </b-card>
+
+      <b-card title="Market Types" :sub-title="marketTypes[0]" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
+        <ul class="mt-4 mb-0">
+          <li v-for="type in marketTypes[1].split('\n')" :key="type">{{type}}</li>
+        </ul>
       </b-card>
 
       <b-card title="Markets" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
@@ -160,6 +166,15 @@
           'United States\n' +
           'Vietnam\n' +
           'Zambia'
+        ],
+        marketTypes: [
+          'Our experience spans the following market types, on pursuits ranging from as small as $1M to as large as $9B (average size is $275M)',
+
+          'State & Local, Federal and International\n' +
+          'Military and Commercial\n' +
+          'Technology Demonstrations, Development, Production, Sustainment and Operations\n' +
+          'Classified and Unclassified\n' +
+          'Low-Cost/Simple to High-Cost Complex opportunities'
         ]
       }
     }
@@ -192,5 +207,10 @@
     .w-70 {
       width: 70%;
     }
+  }
+
+  .card-subtitle /deep/ {
+    color: white !important;
+    opacity: 0.7;
   }
 </style>
