@@ -1,7 +1,7 @@
 <template>
-  <b-navbar type="dark" variant="dark">
-    <b-navbar-brand href="/">
-      <img src="../assets/full-logo.png" alt="Full logo" class="d-inline-block align-top logo">
+  <b-navbar type="dark" style="background-color: black">
+    <b-navbar-brand href="/" style="position: absolute">
+      <img src="../assets/Logo.png" alt="Full logo" class="d-inline-block align-top logo">
     </b-navbar-brand>
 
     <b-collapse is-nav>
@@ -73,7 +73,7 @@
 
 <style scoped>
   .logo {
-    height: 30px;
+    height: 55px;
   }
 
   li {
