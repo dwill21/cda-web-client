@@ -67,15 +67,14 @@
           'myths? Markets favor competitive companies. Is that you, or someone else? How do you know?',
 
           'CDA uses factual market data to answer those questions. Our predictive models and techniques can tell\n' +
-          'you with 94% accuracy whether or not you are likely to win a pursuit and what you can do increase your\n' +
+          'you with 94% accuracy whether or not you are likely to win a pursuit and what you can do to increase your\n' +
           'probability of winning, months or years before the competition occurs. As you approach your bid\n' +
           'submission, we can tell you within a few percentage points just how much your Probability of Win will\n' +
-          'change if you alter price or product quality by a specified amount. Our models are calibrated with more\n' +
+          'change if you alter price or product performance by a specified amount. Our models are calibrated with more\n' +
           'than a decade of prediction and outcome data -- literally hundreds of pursuits -- backed by experienced\n' +
           'analysts who lived them. We have worked in government and in industry, in business development and\n' +
           'in execution, domestic and international. We have a deep understanding of the system in which you\n' +
-          'compete, its rules, its competitors and how new business is won. We help companies like yours do just\n' +
-          'that.'
+          'compete, its rules, its competitors and how new business is won. We help companies like yours win.'
         ],
         howToUse: [
           'All of our products and services are designed to support specific decision points along your competitive\n' +
@@ -83,18 +82,18 @@
           'new business; nothing is accomplished as "process for process sake." Some examples of how our work is\n' +
           'used:',
 
-          'Opportunity Pipeline Prioritization: Which ones should get our time, our people, and resources?',
+          'Opportunity Pipeline Prioritization: Which opportunities should get our time, our people, and our resources?',
 
           'New Business Investment Decisions: Where should we invest to improve our competitiveness? Which investments\n' +
           'will have the biggest impact?',
 
-          'Win Strategy Decisions: What win strategies alternatives are we facing? What are their likely outcomes?\n' +
+          'Win Strategy Decisions: What win strategy alternatives are we facing? What are their likely outcomes?\n' +
           'How do we choose between them?',
 
-          'Bid Aggressiveness Decisions: What are our chances of winning if I bid normally? How does it change if I\n' +
-          'bid more aggressively and by how much? What if I bid less aggressively than normal?',
+          'Bid Aggressiveness Decisions: What are our chances of winning if we bid normally? How does it change if we\n' +
+          'bid more aggressively and by how much? What if we bid less aggressively than normal?',
 
-          'Lessons-Learned: How did we really win or lose? What does it tells us about our competitiveness for\n' +
+          'Lessons-Learned: How did we really win or lose? What does it tell us about our competitiveness for\n' +
           'future pursuits? What decisions should we make differently going forward?'
         ],
         products: [
@@ -102,8 +101,8 @@
             '"Black Hat" Competitive Analysis',
 
             'We collect open source competitive intelligence on desired\n' +
-            'competitors, present it to, and facilitate, a client-participant CDA Black Hat process and model that\n' +
-            'produces 1) predicted competition outcome and 2) alternative win strategies that increase probability of\n' +
+            'competitors, then present it to and facilitate a client-participant CDA Black Hat. Our process and model\n' +
+            'produce 1) predicted competition outcome and 2) alternative win strategies that increase probability of\n' +
             'win.'
           ],
 
@@ -117,7 +116,7 @@
           [
             'Win/Loss Forensic Analysis',
 
-            'We analyze client wins and losses through our objective framework to\n' +
+            'We analyze wins and losses through our objective framework to\n' +
             'determine how and why your company won or lost a pursuit. This aids a client in determining what has\n' +
             'worked and what has not, free from the natural, inherent bias of solely using internal company\n' +
             'personnel.'

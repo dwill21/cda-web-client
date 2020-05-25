@@ -5,11 +5,9 @@
     <b-card-group style="display:block">
       <b-card bg-variant="light" text-variant="dark" class="my-4 py-4">
         <b-card-title class="w-70 mx-auto mb-4" style="text-shadow:none">{{intro[0]}}</b-card-title>
-        <b-card-text class="w-70 mx-auto" style="text-align:center">{{intro[1]}}</b-card-text>
-      </b-card>
-
-      <b-card title="CEO Experience" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
-        <b-card-text v-for="line in ceoExperience.split('\n')" :key="line" class="mt-3">{{line}}</b-card-text>
+        <b-card-text class="w-70 mx-auto" style="text-align:center">
+          {{intro[1].substring(0, intro[1].indexOf("data that go"))}}<span class="underline">data</span>{{intro[1].substring(intro[1].indexOf("data that go")+4)}}
+        </b-card-text>
       </b-card>
 
       <b-card title="Market Types" :sub-title="marketTypes[0]" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
@@ -68,18 +66,12 @@
           'US federal procurement system, in industry, on acquisition staffs, as users, as consultants, as program\n' +
           'managers, as capture managers, and as engineers. We have been in the quantitative data analysis field\n' +
           'for more than a decade, honing our data collection, analysis, extrapolation, correlation and "what does\n' +
-          'it mean/what do we do" skills and predictive models. Some say, "A predictive models is only as good as\n' +
+          'it mean/what do we do" skills and predictive models. Some say, "A predictive model is only as good as\n' +
           'the assumptions that go into it." At CDA, we approach it differently: "A predictive model is only as good\n' +
           'as the data that go into it." Our analysts know our models, because we are the ones who created them,\n' +
           'tested them, used them, and calibrated them to the real world. We know the difference between data\n' +
           'and assumptions, and how focusing on the former reduces the weaknesses of the latter.'
         ],
-        ceoExperience: 'Program Manager in both US Government and in Industry\n' +
-          'Capture Manager for pursuits totaling more than $9M in bid value\n' +
-          'Highly experienced in both Government and Industry\n' +
-          'US Air Force Acquisition Officer - 26 years, including program management assignments in 5 Major Defense Acquisition Programs, 3 of them joint-service; served on Air Force and Joint Staff acquisition staffs\n' +
-          'Industry - 17 years, including program management, capture management, strategy at Lockheed Martin and Raytheon, the world\'s two largest defense companies; 12 years developing ground-breaking market data-based analytical concepts, predictive methods and tools, strategies and tactics for winning competitive pursuits\n' +
-          'Proven track record: over a span of 13 years, and more than 260 pursuits, totaling more than $XXB total bids, his team of Competitive Intelligence and PTW analysts compiled a record of competitor bid price prediction within an average of 8% of actual bids; Pwin predictions within 6% of actual win rate',
         markets: [
           'Agricultural Data Products\n' +
           'Air & Missile Defense Radars\n' +
@@ -174,7 +166,7 @@
           'Military and Commercial\n' +
           'Technology Demonstrations, Development, Production, Sustainment and Operations\n' +
           'Classified and Unclassified\n' +
-          'Low-Cost/Simple to High-Cost Complex opportunities'
+          'Low-Cost/Simple to High-Cost/Complex opportunities'
         ]
       }
     }
@@ -212,5 +204,9 @@
   .card-subtitle /deep/ {
     color: white !important;
     opacity: 0.7;
+  }
+
+  .underline {
+    text-decoration: underline;
   }
 </style>
