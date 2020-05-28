@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="dark" style="background-color: black">
+  <b-navbar type="dark" class="header">
     <b-navbar-brand href="/" style="position: absolute">
       <img src="../assets/Logo.png" alt="Full logo" class="d-inline-block align-top logo">
     </b-navbar-brand>
@@ -71,7 +71,13 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '../assets/colors.scss';
+
+  .header {
+    background-color: $header-footer-color;
+  }
+
   .logo {
     height: 55px;
   }

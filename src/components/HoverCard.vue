@@ -40,7 +40,9 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '../assets/colors.scss';
+
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
   }
@@ -50,7 +52,7 @@
   }
 
   .description {
-    background: #867167;
+    background: $secondary-color;
     border-radius: 3px;
   }
 </style>

@@ -10,11 +10,13 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '../assets/colors.scss';
+
   .footer {
     height: 55px;
     width: 100%;
-    background-color: black;
+    background-color: $header-footer-color;
     color: white
   }
 </style>
