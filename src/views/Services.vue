@@ -45,6 +45,7 @@
   import { BCard, BCardGroup, BCardText, BCardTitle, BRow, BCol } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
+  import constants from '../assets/constants.js'
 
   export default {
     name: 'Home',
@@ -97,30 +98,9 @@
           'future pursuits? What decisions should we make differently going forward?'
         ],
         products: [
-          [
-            '"Black Hat" Competitive Analysis',
-
-            'We collect open source competitive intelligence on desired\n' +
-            'competitors, then present it to and facilitate a client-participant CDA Black Hat. Our process and model\n' +
-            'produce 1) predicted competition outcome and 2) alternative win strategies that increase probability of\n' +
-            'win.'
-          ],
-
-          [
-            'Price-To-Win Analysis',
-
-            'We collect open source competitive intelligence data to populate our predictive\n' +
-            'models to provide a client most-likely competitor bid prices, best value scores, and Probability of Win.\n' +
-            'We also provide bid aggressiveness targets for client bid decision-maker consideration.'
-          ],
-          [
-            'Win/Loss Forensic Analysis',
-
-            'We analyze wins and losses through our objective framework to\n' +
-            'determine how and why your company won or lost a pursuit. This aids a client in determining what has\n' +
-            'worked and what has not, free from the natural, inherent bias of solely using internal company\n' +
-            'personnel.'
-          ]
+          ['"Black Hat" Competitive Analysis', constants.products.blackHat],
+          ['Price-To-Win Analysis', constants.products.priceToWin],
+          ['Win/Loss Forensic Analysis', constants.products.forensicAnalysis]
         ]
       }
     },
