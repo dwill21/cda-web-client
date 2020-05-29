@@ -1,31 +1,19 @@
 <template>
   <b-container>
     <b-row align-v="center" align-h="center" class="h-100" style="min-height: calc(100vh - 110px)">
-      <b-col cols="9" md="5" lg="4" xl="3">
+      <b-col md="10" lg="8" xl="6">
         <b-card title="Contact Us" text-variant="white" style="background:transparent; border:none">
           <div style="padding:15px"></div>
 
           <b-card-text align="left">
-            <b-link href="mailto:foo@example.com" target="_blank">
-              <i class="material-icons text-icon">mail</i> foo@example.com
+            <b-link href="mailto:info@cda-us.com" target="_blank">
+              <i class="material-icons text-icon">mail</i> info@cda-us.com
             </b-link>
           </b-card-text>
 
           <b-card-text align="left">
-            <b-link href="http://twitter.com/foo" target="_blank">
-              <img src="../assets/twitter-icon.png" alt="Twitter Logo"> twitter.com/foo
-            </b-link>
-          </b-card-text>
-
-          <b-card-text align="left">
-            <b-link href="http://facebook.com/foo" target="_blank">
-              <img src="../assets/facebook-icon.png" alt="Facebook Logo"> facebook.com/foo
-            </b-link>
-          </b-card-text>
-
-          <b-card-text align="left">
-            <b-link href="http://linkedin.com/foo" target="_blank">
-              <img src="../assets/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/foo
+            <b-link href="https://www.linkedin.com/company/competitive-data-analytics" target="_blank">
+              <img src="../assets/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/company/competitive-data-analytics
             </b-link>
           </b-card-text>
         </b-card>
