@@ -1,13 +1,22 @@
 <template>
   <div class="footer">
-    <p>&copy; Competitive Data Analytics 2020. All rights reserved.</p>
+    <p>Copyright &copy; Competitive Data Analytics {{currentYear}}. All rights reserved.</p>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "Footer"
+  export default {
+    name: "Footer",
+    data() {
+      return {
+        currentYear: null,
+      }
+    },
+    created() {
+      let today = new Date()
+      this.currentYear = today.getFullYear()
     }
+  }
 </script>
 
 <style lang="scss" scoped>
