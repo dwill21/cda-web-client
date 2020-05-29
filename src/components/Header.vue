@@ -1,7 +1,7 @@
 <template>
   <b-navbar type="dark" class="header">
     <b-navbar-brand href="/" style="position: absolute">
-      <img src="../assets/Logo.png" alt="Full logo" class="d-inline-block align-top logo">
+      <img src="../assets/images/Logo.png" alt="Full logo" class="d-inline-block align-top logo">
     </b-navbar-brand>
 
     <b-collapse is-nav>
@@ -72,7 +72,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/colors.scss';
+  @import '../assets/scss/colors';
 
   .header {
     background-color: $header-footer-color;

@@ -3,24 +3,19 @@
     <h2 class="mt-4 pt-4">Who We Are</h2>
 
     <b-card-group style="display:block">
-      <b-card bg-variant="light" text-variant="dark" class="my-4 py-4">
-        <b-card-title class="w-70 mx-auto mb-4" style="text-shadow:none">{{intro[0]}}</b-card-title>
-        <b-card-text class="w-70 mx-auto" style="text-align:center">
-          {{intro[1].substring(0, intro[1].indexOf("data that go"))}}<span class="underline">data</span>{{intro[1].substring(intro[1].indexOf("data that go")+4)}}
-        </b-card-text>
-      </b-card>
+      <GrabberCard :bold="intro[0]" :text="intro[1]"></GrabberCard>
 
-      <b-card title="Market Types" :sub-title="marketTypes[0]" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
+      <b-card title="Market Types" :sub-title="marketTypes.description" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
         <ul class="mt-4 mb-0">
-          <li v-for="type in marketTypes[1].split('\n')" :key="type">{{type}}</li>
+          <li v-for="type in marketTypes.examples" :key="type">{{type}}</li>
         </ul>
       </b-card>
 
       <b-card title="Markets" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
         <b-row no-gutters>
-          <b-col v-for="(_, idx) in Array(3)" :key="idx" md="4">
+          <b-col v-for="(marketsCol, idx) in markets" :key="idx" md="4">
             <ul class="mt-2 mb-0">
-              <li v-for="market in markets[idx].split('\n')" :key="market">{{market}}</li>
+              <li v-for="market in marketsCol" :key="market">{{market}}</li>
             </ul>
           </b-col>
         </b-row>
@@ -28,9 +23,9 @@
 
       <b-card title="International Customers" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
         <b-row no-gutters>
-          <b-col v-for="(_, idx) in Array(3)" :key="idx" md="4">
+          <b-col v-for="(customersCol, idx) in internationalCustomers" :key="idx" md="4">
             <ul class="mt-2 mb-0">
-              <li v-for="customer in internationalCustomers[idx].split('\n')" :key="customer">{{customer}}</li>
+              <li v-for="customer in customersCol" :key="customer">{{customer}}</li>
             </ul>
           </b-col>
         </b-row>
@@ -40,19 +35,19 @@
 </template>
 
 <script>
-  import { BCard, BCardGroup, BCardText, BCardTitle, BRow, BCol } from 'bootstrap-vue'
+  import { BCard, BCardGroup, BRow, BCol } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
+  import GrabberCard from '../components/GrabberCard.vue';
 
   export default {
     name: 'About',
     components: {
       BCard,
       BCardGroup,
-      BCardText,
-      BCardTitle,
       BRow,
-      BCol
+      BCol,
+      GrabberCard
     },
     data() {
       return {
@@ -68,106 +63,115 @@
           'for more than a decade, honing our data collection, analysis, extrapolation, correlation and "what does\n' +
           'it mean/what do we do" skills and predictive models. Some say, "A predictive model is only as good as\n' +
           'the assumptions that go into it." At CDA, we approach it differently: "A predictive model is only as good\n' +
-          'as the data that go into it." Our analysts know our models, because we are the ones who created them,\n' +
+          'as the <span style="text-decoration:underline">data</span> that go into it." Our analysts know our models, because we are the ones who created them,\n' +
           'tested them, used them, and calibrated them to the real world. We know the difference between data\n' +
           'and assumptions, and how focusing on the former reduces the weaknesses of the latter.'
         ],
         markets: [
-          'Agricultural Data Products\n' +
-          'Air & Missile Defense Radars\n' +
-          'Air to Air Missiles\n' +
-          'Air to Ground Missiles\n' +
-          'Air Traffic Control Management Systems\n' +
-          'Air Traffic Control Radars\n' +
-          'Airborne ISR Platforms & Systems\n' +
-          'Aircraft Avionics\n' +
-          'Aircraft Maintenance Training\n' +
-          'Airport Security\n' +
-          'Aircraft Self Protection Systems\n' +
-          'Archive & Records Operations\n' +
-          'Armored Vehicle Modernization\n' +
-          'Bomb Racks\n' +
-          'Border Security Systems\n' +
-          'Command & Control Systems\n' +
-          'Communications & Data Networks\n' +
-          'Cyber Managed Services',
-
-          'Cyber Products\n' +
-          'Cyber Security Operations Center\n' +
-          'Data Analytics\n' +
-          'Data Center Construction and O&M\n' +
-          'Data Warehouse\n' +
-          'EMP Hardening\n' +
-          'EO/IR Systems\n' +
-          'Facilities Construction\n' +
-          'GEOINT Engineering Services\n' +
-          'Ground Terminal Infrastructure\n' +
-          'Ground Launched Missile Systems\n' +
-          'High Performance Computing\n' +
-          'Highway Tolling Systems\n' +
-          'IT Managed Services\n' +
-          'Intelligence Data Processing\n' +
-          'ISR Sensors\n' +
-          'Equipment Leasing\n' +
-          'Logistics Support Services',
-
-          'Military & Law Enforcement Training\n' +
-          'Maritime Radars\n' +
-          'Material Management\n' +
-          'Military Communications Systems\n' +
-          'Public Safety Communications Systems\n' +
-          'SATCOM\n' +
-          'Satellite Ground Segments\n' +
-          'Sensor Product Processing\n' +
-          'SIGINT Engineering Services\n' +
-          'Software Development\n' +
-          'Strategic ISR Systems\n' +
-          'Tactical ISR Systems\n' +
-          'Test & Training Range Support\n' +
-          'Training Device Maintenance\n' +
-          'UAVs\n' +
-          'Vehicle-Mounted Sensors and Weapons\n' +
-          'Watercraft Upgrades\n' +
-          'Weather Information Systems'
+          [
+            'Agricultural Data Products',
+            'Air & Missile Defense Radars',
+            'Air to Air Missiles',
+            'Air to Ground Missiles',
+            'Air Traffic Control Management Systems',
+            'Air Traffic Control Radars',
+            'Airborne ISR Platforms & Systems',
+            'Aircraft Avionics',
+            'Aircraft Maintenance Training',
+            'Airport Security',
+            'Aircraft Self Protection Systems',
+            'Archive & Records Operations',
+            'Armored Vehicle Modernization',
+            'Bomb Racks',
+            'Border Security Systems',
+            'Command & Control Systems',
+            'Communications & Data Networks',
+            'Cyber Managed Services',
+          ],
+          [
+            'Cyber Products',
+            'Cyber Security Operations Center',
+            'Data Analytics',
+            'Data Center Construction and O&M',
+            'Data Warehouse',
+            'EMP Hardening',
+            'EO/IR Systems',
+            'Facilities Construction',
+            'GEOINT Engineering Services',
+            'Ground Terminal Infrastructure',
+            'Ground Launched Missile Systems',
+            'High Performance Computing',
+            'Highway Tolling Systems',
+            'IT Managed Services',
+            'Intelligence Data Processing',
+            'ISR Sensors',
+            'Equipment Leasing',
+            'Logistics Support Services',
+          ],
+          [
+            'Military & Law Enforcement Training',
+            'Maritime Radars',
+            'Material Management',
+            'Military Communications Systems',
+            'Public Safety Communications Systems',
+            'SATCOM',
+            'Satellite Ground Segments',
+            'Sensor Product Processing',
+            'SIGINT Engineering Services',
+            'Software Development',
+            'Strategic ISR Systems',
+            'Tactical ISR Systems',
+            'Test & Training Range Support',
+            'Training Device Maintenance',
+            'UAVs',
+            'Vehicle-Mounted Sensors and Weapons',
+            'Watercraft Upgrades',
+            'Weather Information Systems'
+          ],
         ],
         internationalCustomers: [
-          'Australia\n' +
-          'Bahamas\n' +
-          'Bahrain\n' +
-          'Canada\n' +
-          'Chile\n' +
-          'Germany\n' +
-          'Hong Kong\n' +
-          'India\n' +
-          'Israel',
-
-          'Jordan\n' +
-          'Kingdom of Saudi Arabia\n' +
-          'Kuwait\n' +
-          'Mexico\n' +
-          'Oman\n' +
-          'Peru\n' +
-          'Philippines\n' +
-          'Poland',
-
-          'Romania\n' +
-          'South Korea\n' +
-          'Thailand\n' +
-          'United Arab Emirates\n' +
-          'United Kingdom\n' +
-          'United States\n' +
-          'Vietnam\n' +
-          'Zambia'
+          [
+            'Australia',
+            'Bahamas',
+            'Bahrain',
+            'Canada',
+            'Chile',
+            'Germany',
+            'Hong Kong',
+            'India',
+            'Israel',
+          ],
+          [
+            'Jordan',
+            'Kingdom of Saudi Arabia',
+            'Kuwait',
+            'Mexico',
+            'Oman',
+            'Peru',
+            'Philippines',
+            'Poland',
+          ],
+          [
+            'Romania',
+            'South Korea',
+            'Thailand',
+            'United Arab Emirates',
+            'United Kingdom',
+            'United States',
+            'Vietnam',
+            'Zambia'
+          ]
         ],
-        marketTypes: [
-          'Our experience spans the following market types, on pursuits ranging from as small as $1M to as large as $9B (average size is $275M)',
-
-          'State & Local, Federal and International\n' +
-          'Military and Commercial\n' +
-          'Technology Demonstrations, Development, Production, Sustainment and Operations\n' +
-          'Classified and Unclassified\n' +
-          'Low-Cost/Simple to High-Cost/Complex opportunities'
-        ]
+        marketTypes: {
+          description: 'Our experience spans the following market types, on pursuits ranging from as small as $1M to as large as $9B (average size is $275M)',
+          examples: [
+            'State & Local, Federal and International',
+            'Military and Commercial',
+            'Technology Demonstrations, Development, Production, Sustainment and Operations',
+            'Classified and Unclassified',
+            'Low-Cost/Simple to High-Cost/Complex opportunities'
+          ]
+        }
       }
     }
   }
@@ -195,18 +199,8 @@
     width: 90%;
   }
 
-  @media (min-width: 768px) {
-    .w-70 {
-      width: 70%;
-    }
-  }
-
   .card-subtitle /deep/ {
     color: white !important;
     opacity: 0.7;
-  }
-
-  .underline {
-    text-decoration: underline;
   }
 </style>

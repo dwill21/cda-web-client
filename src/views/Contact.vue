@@ -13,7 +13,7 @@
 
           <b-card-text align="left">
             <b-link href="https://www.linkedin.com/company/competitive-data-analytics" target="_blank">
-              <img src="../assets/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/company/competitive-data-analytics
+              <img src="../assets/images/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/company/competitive-data-analytics
             </b-link>
           </b-card-text>
         </b-card>

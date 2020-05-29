@@ -20,7 +20,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/colors.scss';
+  @import '../assets/scss/colors';
 
   .footer {
     height: 55px;

@@ -3,37 +3,32 @@
     <h2 class="mt-4 pt-4">What We Do</h2>
 
     <b-card-group style="display:block">
-      <b-card bg-variant="light" text-variant="dark" class="my-4 py-4">
-        <b-card-title class="w-70 mx-auto mb-4" style="text-shadow:none">{{intro[0]}}</b-card-title>
-        <b-card-text
-          v-for="(_, idx) in Array(2)"
-          :key="idx"
-          class="w-70 mx-auto"
-        >{{intro[idx+1]}}</b-card-text>
-      </b-card>
+      <GrabberCard :bold="intro[0]" :text="intro.slice(1)"></GrabberCard>
 
       <b-card title="How Clients Use Our Products/Services" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
-        <b-card-text class="mt-4">{{howToUse[0]}}</b-card-text>
-        <ul>
-          <li v-for="line in howToUse.slice(1)" :key="line" class="mt-4">
-            <span style="font-weight: bold">{{line.substring(0, line.indexOf(":"))}}</span>{{line.substring(line.indexOf(":"))}}
-          </li>
-        </ul>
+        <b-card-text class="mt-4">{{howToUse.intro}}</b-card-text>
+        <b-row class="mt-4 pt-md-4" align-h="center">
+          <b-col v-for="(example, idx) in howToUse.examples" :key="idx" md="4" class="mb-2">
+            <i class="material-icons" style="font-size: 6rem">{{example.icon}}</i>
+            <p style="font-weight: bold; margin-bottom: 0.5rem">{{example.title}}</p>
+            <p>{{example.description}}</p>
+          </b-col>
+        </b-row>
       </b-card>
 
       <b-card id="products" title="Our Primary Products" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
         <b-row
-          v-for="(_, idx) in Array(3)"
+          v-for="(product, idx) in products"
           :key="idx"
-          :class="['my-4', idx !== 2 ? 'pb-4' : '']"
+          :class="['my-4', 'pt-1', idx !== 2 ? 'pb-4' : '']"
           :style="idx !== 2 ? { 'border-bottom': '1px solid rgba(0,0,0,0.2)' } : {}"
           no-gutters
         >
           <b-col md="4" class="mb-3 my-md-auto">
-            <b-card-text style="font-weight: bold">{{products[idx][0]}}</b-card-text>
+            <b-card-text style="font-weight: bold; font-size: 1.1rem">{{product.title}}</b-card-text>
           </b-col>
           <b-col md="8">
-            <b-card-text style="text-align: left">{{products[idx][1]}}</b-card-text>
+            <b-card-text style="text-align: left">{{product.description}}</b-card-text>
           </b-col>
         </b-row>
       </b-card>
@@ -42,9 +37,10 @@
 </template>
 
 <script>
-  import { BCard, BCardGroup, BCardText, BCardTitle, BRow, BCol } from 'bootstrap-vue'
+  import { BCard, BCardGroup, BCardText, BRow, BCol } from 'bootstrap-vue'
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
+  import GrabberCard from '../components/GrabberCard.vue';
   import constants from '../assets/constants.js'
 
   export default {
@@ -53,9 +49,9 @@
       BCard,
       BCardGroup,
       BCardText,
-      BCardTitle,
       BRow,
-      BCol
+      BCol,
+      GrabberCard
     },
     data() {
       return {
@@ -77,30 +73,54 @@
           'in execution, domestic and international. We have a deep understanding of the system in which you\n' +
           'compete, its rules, its competitors and how new business is won. We help companies like yours win.'
         ],
-        howToUse: [
-          'All of our products and services are designed to support specific decision points along your competitive\n' +
+        howToUse: {
+          intro: 'All of our products and services are designed to support specific decision points along your competitive\n' +
           'pursuit journey. To maximize our value to you, everything we do has a defined purpose to help you win\n' +
           'new business; nothing is accomplished as "process for process sake." Some examples of how our work is\n' +
           'used:',
-
-          'Opportunity Pipeline Prioritization: Which opportunities should get our time, our people, and our resources?',
-
-          'New Business Investment Decisions: Where should we invest to improve our competitiveness? Which investments\n' +
-          'will have the biggest impact?',
-
-          'Win Strategy Decisions: What win strategy alternatives are we facing? What are their likely outcomes?\n' +
-          'How do we choose between them?',
-
-          'Bid Aggressiveness Decisions: What are our chances of winning if we bid normally? How does it change if we\n' +
-          'bid more aggressively and by how much? What if we bid less aggressively than normal?',
-
-          'Lessons-Learned: How did we really win or lose? What does it tell us about our competitiveness for\n' +
-          'future pursuits? What decisions should we make differently going forward?'
-        ],
+          examples: [
+            {
+              title: 'Opportunity Pipeline Prioritization',
+              description: 'Which opportunities should get our time, our people, and our resources?',
+              icon: 'add_circle'
+            },
+            {
+              title: 'New Business Investment Decisions',
+              description: 'Where should we invest to improve our competitiveness? Which investments will have the biggest impact?',
+              icon: 'account_balance'
+            },
+            {
+              title: 'Win Strategy Decisions',
+              description: 'What win strategy alternatives are we facing? What are their likely outcomes? How do we choose between them?',
+              icon: 'model_training'
+            },
+            {
+              title: 'Bid Aggressiveness Decisions',
+              description: 'What are our chances of winning if we bid normally? How does it change if we bid more aggressively ' +
+                'and by how much? What if we bid less aggressively than normal?',
+              icon: 'payments'
+            },
+            {
+              title: 'Lessons-Learned',
+              description: 'How did we really win or lose? What does it tell us about our competitiveness for future pursuits? ' +
+                'What decisions should we make differently going forward?',
+              icon: 'school'
+            }
+          ]
+        },
         products: [
-          ['"Black Hat" Competitive Analysis', constants.products.blackHat],
-          ['Price-To-Win Analysis', constants.products.priceToWin],
-          ['Win/Loss Forensic Analysis', constants.products.forensicAnalysis]
+          {
+            title: '"Black Hat" Competitive Analysis',
+            description: constants.products.blackHat
+          },
+          {
+            title: 'Price-To-Win Analysis',
+            description: constants.products.priceToWin
+          },
+          {
+            title: 'Win/Loss Forensic Analysis',
+            description: constants.products.forensicAnalysis
+          }
         ]
       }
     },
@@ -128,11 +148,5 @@
 
   .w-90 {
     width: 90%;
-  }
-
-  @media (min-width: 768px) {
-    .w-70 {
-      width: 70%;
-    }
   }
 </style>

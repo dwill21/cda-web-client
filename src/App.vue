@@ -22,7 +22,7 @@
 </script>
 
 <style lang="scss">
-@import 'assets/colors.scss';
+@import './assets/scss/colors';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -7,11 +7,11 @@
 
       <b-col md="6" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
         <b-card-group columns style="display:inline">
-          <HoverCard title="Black Hat" :description="products.blackHat" :img-src="require('../assets/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" @click.native="redirect('/services#products')"></HoverCard>
+          <HoverCard title="Black Hat" :description="products.blackHat" :img-src="require('../assets/images/neon-question-mark.jpg')" img-alt="Bookshelf (Photo by Emily Morter on Unsplash)" @click.native="redirect('/services#products')"></HoverCard>
 
-          <HoverCard title="Price to Win" :description="products.priceToWin" :img-src="require('../assets/data.jpg')" img-alt="Data" @click.native="redirect('/services#products')"></HoverCard>
+          <HoverCard title="Price to Win" :description="products.priceToWin" :img-src="require('../assets/images/data.jpg')" img-alt="Data" @click.native="redirect('/services#products')"></HoverCard>
 
-          <HoverCard title="Win/Loss Forensic Analysis" :description="products.forensicAnalysis" :img-src="require('../assets/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" @click.native="redirect('/services#products')"></HoverCard>
+          <HoverCard title="Win/Loss Forensic Analysis" :description="products.forensicAnalysis" :img-src="require('../assets/images/magnifying_glass.jpg')" img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)" @click.native="redirect('/services#products')"></HoverCard>
         </b-card-group>
       </b-col>
     </b-row>

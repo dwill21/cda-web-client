@@ -41,7 +41,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/colors.scss';
+  @import '../assets/scss/colors';
 
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
