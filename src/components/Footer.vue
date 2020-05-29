@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p>Copyright &copy; Competitive Data Analytics {{currentYear}}. All rights reserved.</p>
+    <p>Copyright &copy; {{currentYear}} Competitive Data Analytics, LLC. All rights reserved.</p>
   </div>
 </template>
 
