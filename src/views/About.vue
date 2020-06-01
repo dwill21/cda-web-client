@@ -28,7 +28,7 @@
         </b-row>
       </b-card>
 
-      <b-card title="International Customers" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
+      <b-card title="International Pursuit Customers" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
         <b-row no-gutters>
           <b-col v-for="(customersCol, idx) in internationalCustomers" :key="idx" md="4">
             <ul class="mt-2 mb-0">
@@ -85,8 +85,10 @@
             'Airborne ISR Platforms & Systems',
             'Aircraft Avionics',
             'Aircraft Maintenance Training',
+            'Aircraft Modification & Certification',
             'Airport Security',
             'Aircraft Self Protection Systems',
+            'Aircraft Supply Support',
             'Archive & Records Operations',
             'Armored Vehicle Modernization',
             'Bomb Racks',
@@ -103,7 +105,9 @@
             'Data Warehouse',
             'EMP Hardening',
             'EO/IR Systems',
+            'Equipment Leasing',
             'Facilities Construction',
+            'Flight Training',
             'GEOINT Engineering Services',
             'Ground Terminal Infrastructure',
             'Ground Launched Missile Systems',
@@ -112,7 +116,6 @@
             'IT Managed Services',
             'Intelligence Data Processing',
             'ISR Sensors',
-            'Equipment Leasing',
             'Logistics Support Services',
           ],
           [
@@ -120,6 +123,7 @@
             'Maritime Radars',
             'Material Management',
             'Military Communications Systems',
+            'Naval Weapons Training',
             'Public Safety Communications Systems',
             'SATCOM',
             'Satellite Ground Segments',
