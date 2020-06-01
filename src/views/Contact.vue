@@ -12,6 +12,12 @@
           </b-card-text>
 
           <b-card-text align="left">
+            <b-link href="tel:214-984-2807" target="_blank">
+              <i class="material-icons text-icon">phone</i> (214) 984-2807
+            </b-link>
+          </b-card-text>
+
+          <b-card-text align="left">
             <b-link href="https://www.linkedin.com/company/competitive-data-analytics" target="_blank">
               <img src="../assets/images/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/company/competitive-data-analytics
             </b-link>
