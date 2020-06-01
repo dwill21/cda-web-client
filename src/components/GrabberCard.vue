@@ -35,8 +35,10 @@
   }
 </script>
 
-<style scoped>
-  @media (min-width: 768px) {
+<style lang="scss" scoped>
+  @import '../assets/scss/display-breakpoints.scss';
+
+  @media (min-width: $bootstrap-md) {
     .w-70 {
       width: 70%;
     }

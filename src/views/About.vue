@@ -6,9 +6,16 @@
       <GrabberCard :bold="intro[0]" :text="intro[1]"></GrabberCard>
 
       <b-card title="Market Types" :sub-title="marketTypes.description" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
-        <ul class="mt-4 mb-0">
-          <li v-for="type in marketTypes.examples" :key="type">{{type}}</li>
-        </ul>
+        <b-row class="mt-4 pt-md-4" align-h="center" no-gutters>
+          <b-col
+            v-for="(type, idx) in marketTypes.examples"
+            :key="idx"
+            :class="['mb-2', 'pt-2', 'pt-md-0', idx !== marketTypes.examples.length - 1 ? 'market-type' : '']"
+            sm
+          >
+            <p style="font-weight: bold">{{type}}</p>
+          </b-col>
+        </b-row>
       </b-card>
 
       <b-card title="Markets" bg-variant="dark" class="w-90 mx-auto mb-4 py-4">
@@ -177,13 +184,11 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '../assets/scss/display-breakpoints.scss';
+
   h2, h4 {
     text-shadow: 1px 1px black;
-  }
-
-  p {
-    text-align: left;
   }
 
   li {
@@ -202,5 +207,17 @@
   .card-subtitle /deep/ {
     color: white !important;
     opacity: 0.7;
+  }
+
+  @media (min-width: $bootstrap-md) {
+    .market-type {
+      border-right: 1px solid rgba(0,0,0,0.2);
+    }
+  }
+
+  @media (max-width: $bootstrap-md) {
+    .market-type {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
   }
 </style>
