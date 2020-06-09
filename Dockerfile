@@ -10,9 +10,13 @@ RUN npm run build
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
+# copy script for generating SSL certs
+COPY generate_ssl_cert.sh /tmp/
+RUN chmod u+x /tmp/generate_ssl_cert.sh
+
 # overwrite the default Nginx configuration file with our own
 RUN rm /etc/nginx/conf.d/default.conf
-COPY default.conf /etc/nginx/conf.d
+COPY nginx/*.conf /etc/nginx/conf.d
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
