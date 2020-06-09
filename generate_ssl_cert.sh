@@ -28,6 +28,6 @@ ${ACME_SCRIPT} --installcert -d ${DOMAIN_NAME} \
     --keypath ${CERT_DIR}/${DOMAIN_NAME}.key \
     --fullchainpath ${CERT_DIR}/${DOMAIN_NAME}.cer
 
-cp /etc/nginx/conf.d/https.conf /etc/nginx/conf.d/default.conf
+cp /tmp/https.conf /etc/nginx/conf.d/default.conf
 
 nginx -s reload
