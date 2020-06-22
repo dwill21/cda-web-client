@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-v="center" class="h-100" style="min-height: calc(100vh - 110px)">
       <b-col md="6" data-aos="fade-right" data-aos-duration="1500">
-        <h2 id="tagline">Power your business development with <i>data-driven decisions</i></h2>
+        <h1 id="tagline">Power your business development with <i>data-driven decisions</i></h1>
       </b-col>
 
       <b-col md="6" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
