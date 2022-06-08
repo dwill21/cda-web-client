@@ -37,14 +37,15 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Component from 'vue-class-component';
 import {
   BCardGroup, BCol, BRow, BContainer,
 } from 'bootstrap-vue';
 import HoverCard from '../components/HoverCardComponent.vue';
 import constants from '../assets/constants';
 
-export default {
-  name: 'HomeView',
+@Component({
   components: {
     BCardGroup,
     BCol,
@@ -52,17 +53,14 @@ export default {
     BContainer,
     HoverCard,
   },
-  data() {
-    return {
-      products: constants.products,
-    };
-  },
-  methods: {
-    redirect(to) {
-      this.$router.push(to);
-    },
-  },
-};
+})
+export default class HomeView extends Vue {
+  products = constants.products;
+
+  redirect(to) {
+    this.$router.push(to);
+  }
+}
 </script>
 
 <style scoped>

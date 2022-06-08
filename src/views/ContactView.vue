@@ -32,12 +32,13 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Component from 'vue-class-component';
 import {
   BContainer, BRow, BCol, BCard, BCardText, BLink,
 } from 'bootstrap-vue';
 
-export default {
-  name: 'ContactView',
+@Component({
   components: {
     BContainer,
     BRow,
@@ -46,7 +47,8 @@ export default {
     BCardText,
     BLink,
   },
-};
+})
+export default class ContactView extends Vue {}
 </script>
 
 <style scoped>
