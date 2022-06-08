@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
@@ -19,20 +19,18 @@ const routeOptions = [
   {
     path: '/contact',
     name: 'Contact',
-  }
-]
+  },
+];
 
-const routes = routeOptions.map(route => {
-  return {
-    ...route,
-    component: () => import(/* webpackChunkName: "[request]" */ `../views/${route.name}.vue`)
-  }
-});
+const routes = routeOptions.map((route) => ({
+  ...route,
+  component: () => import(/* webpackChunkName: "[request]" */ `../views/${route.name}.vue`),
+}));
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
-export default router
+export default router;

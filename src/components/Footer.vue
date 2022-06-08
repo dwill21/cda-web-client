@@ -5,18 +5,18 @@
 </template>
 
 <script>
-  export default {
-    name: "Footer",
-    data() {
-      return {
-        currentYear: null,
-      }
-    },
-    created() {
-      let today = new Date()
-      this.currentYear = today.getFullYear()
-    }
-  }
+export default {
+  name: 'FooterComponent',
+  data() {
+    return {
+      currentYear: null,
+    };
+  },
+  created() {
+    const today = new Date();
+    this.currentYear = today.getFullYear();
+  },
+};
 </script>
 
 <style lang="scss" scoped>
