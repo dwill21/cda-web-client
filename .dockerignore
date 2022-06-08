@@ -1,6 +1,0 @@
-# IDE files
-.idea/
-*.iml
-
-node_modules/
-.gitignore
