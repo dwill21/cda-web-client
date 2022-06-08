@@ -10,34 +10,32 @@
 </template>
 
 <script>
-  import { BCard, BCardText, BCardTitle } from 'bootstrap-vue'
-  import 'bootstrap/dist/css/bootstrap.css'
-  import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { BCard, BCardText, BCardTitle } from 'bootstrap-vue';
 
-  export default {
-    name: "HoverCard",
-    components: {
-      BCard,
-      BCardText,
-      BCardTitle,
+export default {
+  name: 'HoverCard',
+  components: {
+    BCard,
+    BCardText,
+    BCardTitle,
+  },
+  props: {
+    title: String,
+    description: String,
+    imgSrc: String,
+    imgAlt: String,
+  },
+  data() {
+    return {
+      isDescriptionVisible: false,
+    };
+  },
+  methods: {
+    showDescription(hovered) {
+      this.isDescriptionVisible = hovered;
     },
-    props: {
-      title: String,
-      description: String,
-      imgSrc: String,
-      imgAlt: String,
-    },
-    data() {
-      return {
-        isDescriptionVisible: false,
-      }
-    },
-    methods: {
-      showDescription(hovered) {
-        this.isDescriptionVisible = hovered;
-      },
-    }
-  }
+  },
+};
 </script>
 
 <style lang="scss" scoped>

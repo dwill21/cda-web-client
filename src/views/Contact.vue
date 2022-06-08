@@ -19,7 +19,10 @@
 
           <b-card-text align="left">
             <b-link href="https://www.linkedin.com/company/competitive-data-analytics" target="_blank">
-              <img src="../assets/images/linkedin-icon.png" alt="LinkedIn Logo"> linkedin.com/company/competitive-data-analytics
+              <img
+                src="../assets/images/linkedin-icon.png"
+                alt="LinkedIn Logo"
+              > linkedin.com/company/competitive-data-analytics
             </b-link>
           </b-card-text>
         </b-card>
@@ -29,21 +32,21 @@
 </template>
 
 <script>
-  import { BContainer, BRow, BCol, BCard, BCardText, BLink } from 'bootstrap-vue'
-  import 'bootstrap/dist/css/bootstrap.css'
-  import 'bootstrap-vue/dist/bootstrap-vue.css'
+import {
+  BContainer, BRow, BCol, BCard, BCardText, BLink,
+} from 'bootstrap-vue';
 
-  export default {
-    name: "Contact",
-    components: {
-      BContainer,
-      BRow,
-      BCol,
-      BCard,
-      BCardText,
-      BLink,
-    }
-  }
+export default {
+  name: 'ContactView',
+  components: {
+    BContainer,
+    BRow,
+    BCol,
+    BCard,
+    BCardText,
+    BLink,
+  },
+};
 </script>
 
 <style scoped>

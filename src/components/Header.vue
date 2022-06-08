@@ -36,39 +36,39 @@
 </template>
 
 <script>
-  import { BCollapse, BNavbar, BNavbarBrand, BNavItemDropdown, BDropdownItem } from 'bootstrap-vue'
-  import 'bootstrap/dist/css/bootstrap.css'
-  import 'bootstrap-vue/dist/bootstrap-vue.css'
+import {
+  BCollapse, BNavbar, BNavbarBrand, BNavItemDropdown, BDropdownItem,
+} from 'bootstrap-vue';
 
-  export default {
-    name: "Header",
-    components: {
-        BCollapse,
-        BNavbar,
-        BNavbarBrand,
-        BNavItemDropdown,
-        BDropdownItem,
-        BNavbarNav: () => import('bootstrap-vue').then(m => m.BNavbarNav),
-        BNavItem: () => import('bootstrap-vue').then(m => m.BNavItem),
+export default {
+  name: 'HeaderComponent',
+  components: {
+    BCollapse,
+    BNavbar,
+    BNavbarBrand,
+    BNavItemDropdown,
+    BDropdownItem,
+    BNavbarNav: () => import('bootstrap-vue').then((m) => m.BNavbarNav),
+    BNavItem: () => import('bootstrap-vue').then((m) => m.BNavItem),
+  },
+  data() {
+    return {
+      windowWidth: window.innerWidth,
+      // isSignedIn: false,
+    };
+  },
+  mounted() {
+    window.addEventListener('resize', this.onResize);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth;
     },
-    data() {
-      return {
-        windowWidth: window.innerWidth,
-        // isSignedIn: false,
-      }
-    },
-    mounted() {
-      window.addEventListener('resize', this.onResize);
-    },
-    beforeDestroy() {
-      window.removeEventListener('resize', this.onResize);
-    },
-    methods: {
-      onResize() {
-        this.windowWidth = window.innerWidth;
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -95,7 +95,7 @@
     color: white;
   }
 
-  .dropdown-toggle /deep/ {
+  .dropdown-toggle::v-deep {
     padding: 0 16px;
   }
 </style>

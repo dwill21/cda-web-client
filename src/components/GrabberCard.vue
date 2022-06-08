@@ -12,27 +12,25 @@
 </template>
 
 <script>
-  import { BCard, BCardText, BCardTitle } from 'bootstrap-vue'
-  import 'bootstrap/dist/css/bootstrap.css'
-  import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { BCard, BCardText, BCardTitle } from 'bootstrap-vue';
 
-  export default {
-    name: "GrabberCard",
-    components: {
-      BCard,
-      BCardTitle,
-      BCardText
+export default {
+  name: 'GrabberCard',
+  components: {
+    BCard,
+    BCardTitle,
+    BCardText,
+  },
+  props: {
+    bold: String,
+    text: [Array, String],
+  },
+  computed: {
+    cardText() {
+      return Array.isArray(this.text) ? this.text : [this.text];
     },
-    props: {
-      bold: String,
-      text: [Array, String],
-    },
-    computed: {
-      cardText() {
-       return Array.isArray(this.text) ? this.text : [this.text]
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style lang="scss" scoped>
