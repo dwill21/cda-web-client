@@ -5,18 +5,13 @@
 </template>
 
 <script>
-export default {
-  name: 'FooterComponent',
-  data() {
-    return {
-      currentYear: null,
-    };
-  },
-  created() {
-    const today = new Date();
-    this.currentYear = today.getFullYear();
-  },
-};
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component
+export default class FooterComponent extends Vue {
+  currentYear = new Date().getFullYear();
+}
 </script>
 
 <style lang="scss" scoped>

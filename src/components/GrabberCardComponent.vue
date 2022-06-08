@@ -12,25 +12,27 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import { Prop } from 'vue-property-decorator';
 import { BCard, BCardText, BCardTitle } from 'bootstrap-vue';
 
-export default {
-  name: 'GrabberCard',
+@Component({
   components: {
     BCard,
     BCardTitle,
     BCardText,
   },
-  props: {
-    bold: String,
-    text: [Array, String],
-  },
-  computed: {
-    cardText() {
-      return Array.isArray(this.text) ? this.text : [this.text];
-    },
-  },
-};
+})
+export default class GrabberCardComponent extends Vue {
+  @Prop(String) bold;
+
+  @Prop([Array, String]) text;
+
+  get cardText() {
+    return Array.isArray(this.text) ? this.text : [this.text];
+  }
+}
 </script>
 
 <style lang="scss" scoped>

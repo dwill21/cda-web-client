@@ -24,39 +24,38 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Component from 'vue-class-component';
 import {
-  BCollapse, BNavbar, BNavbarBrand, BNavItemDropdown, BDropdownItem,
+  BCollapse, BNavbar, BNavbarBrand, BNavItemDropdown, BDropdownItem, BNavbarNav, BNavItem,
 } from 'bootstrap-vue';
 
-export default {
-  name: 'HeaderComponent',
+@Component({
   components: {
     BCollapse,
     BNavbar,
     BNavbarBrand,
     BNavItemDropdown,
     BDropdownItem,
-    BNavbarNav: () => import('bootstrap-vue').then((m) => m.BNavbarNav),
-    BNavItem: () => import('bootstrap-vue').then((m) => m.BNavItem),
+    BNavbarNav,
+    BNavItem,
   },
-  data() {
-    return {
-      windowWidth: window.innerWidth,
-      // isSignedIn: false,
-    };
-  },
+})
+export default class HeaderComponent extends Vue {
+  windowWidth = window.innerWidth;
+
   mounted() {
     window.addEventListener('resize', this.onResize);
-  },
-  beforeDestroy() {
+  }
+
+  destroyed() {
     window.removeEventListener('resize', this.onResize);
-  },
-  methods: {
-    onResize() {
-      this.windowWidth = window.innerWidth;
-    },
-  },
-};
+  }
+
+  onResize() {
+    this.windowWidth = window.innerWidth;
+  }
+}
 </script>
 
 <style lang="scss" scoped>
