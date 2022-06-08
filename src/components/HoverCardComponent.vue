@@ -10,32 +10,33 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import { Prop } from 'vue-property-decorator';
 import { BCard, BCardText, BCardTitle } from 'bootstrap-vue';
 
-export default {
-  name: 'HoverCard',
+@Component({
   components: {
     BCard,
     BCardText,
     BCardTitle,
   },
-  props: {
-    title: String,
-    description: String,
-    imgSrc: String,
-    imgAlt: String,
-  },
-  data() {
-    return {
-      isDescriptionVisible: false,
-    };
-  },
-  methods: {
-    showDescription(hovered) {
-      this.isDescriptionVisible = hovered;
-    },
-  },
-};
+})
+export default class HoverCardComponent extends Vue {
+  @Prop(String) title;
+
+  @Prop(String) description;
+
+  @Prop(String) imgSrc;
+
+  @Prop(String) imgAlt;
+
+  isDescriptionVisible = false;
+
+  showDescription(hovered) {
+    this.isDescriptionVisible = hovered;
+  }
+}
 </script>
 
 <style lang="scss" scoped>

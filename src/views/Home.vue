@@ -40,7 +40,7 @@
 import {
   BCardGroup, BCol, BRow, BContainer,
 } from 'bootstrap-vue';
-import HoverCard from '../components/HoverCard.vue';
+import HoverCard from '../components/HoverCardComponent.vue';
 import constants from '../assets/constants';
 
 export default {

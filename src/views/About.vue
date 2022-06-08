@@ -56,7 +56,7 @@
 import {
   BCard, BCardGroup, BRow, BCol,
 } from 'bootstrap-vue';
-import GrabberCard from '../components/GrabberCard.vue';
+import GrabberCard from '../components/GrabberCardComponent.vue';
 
 export default {
   name: 'AboutView',

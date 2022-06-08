@@ -51,7 +51,7 @@
 import {
   BCard, BCardGroup, BCardText, BRow, BCol,
 } from 'bootstrap-vue';
-import GrabberCard from '../components/GrabberCard.vue';
+import GrabberCard from '../components/GrabberCardComponent.vue';
 import constants from '../assets/constants';
 
 export default {
