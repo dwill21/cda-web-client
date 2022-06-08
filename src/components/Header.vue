@@ -9,15 +9,6 @@
         <b-nav-item to="/services">What We Do</b-nav-item>
         <b-nav-item to="/about">Who We Are</b-nav-item>
         <b-nav-item to="/contact">Contact</b-nav-item>
-
-        <!-- No features ready yet that need login page
-        <b-nav-item-dropdown right>
-          <template v-slot:button-content>
-            <i class="material-icons">account_circle</i>
-          </template>
-          <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
-          <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item>
-        </b-nav-item-dropdown> -->
       </b-navbar-nav>
 
       <b-nav-item-dropdown v-else class="ml-auto" right no-caret>
@@ -27,9 +18,6 @@
         <b-dropdown-item to="/services" right>What We Do</b-dropdown-item>
         <b-dropdown-item to="/about" right>Who We Are</b-dropdown-item>
         <b-dropdown-item to="/contact" right>Contact</b-dropdown-item>
-        <!-- No features ready yet that need login page
-        <b-dropdown-item v-if="!isSignedIn" to="/sign-up">Sign Up</b-dropdown-item>
-        <b-dropdown-item v-if="!isSignedIn" to="/login">Log In</b-dropdown-item> -->
       </b-nav-item-dropdown>
     </b-collapse>
   </b-navbar>
