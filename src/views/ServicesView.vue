@@ -22,15 +22,19 @@
 
       <b-card
         id="products"
-        title="Our Primary Products"
         bg-variant="dark"
         class="w-90 mx-auto mb-4 py-4"
       >
+        <b-card-title class="mb-4">
+          Our Primary Products
+        </b-card-title>
+
         <b-row
           v-for="(product, idx) in products"
           :key="idx"
-          :class="['my-4', 'pt-1', idx !== 2 ? 'pb-4' : '']"
-          :style="idx !== 2 ? { 'border-bottom': '1px solid rgba(0,0,0,0.2)' } : {}"
+          :id="product.id"
+          :class="['pt-4', idx < products.length-1 ? 'pb-4' : '']"
+          :style="idx < products.length-1 ? { 'border-bottom': '1px solid rgba(0,0,0,0.2)' } : {}"
           no-gutters
         >
           <b-col md="4" class="mb-3 my-md-auto">
@@ -39,7 +43,9 @@
             </b-card-text>
           </b-col>
           <b-col md="8">
-            <b-card-text style="text-align: left">{{product.description}}</b-card-text>
+            <b-card-text style="text-align: left">
+              {{product.description}}
+            </b-card-text>
           </b-col>
         </b-row>
       </b-card>
@@ -51,16 +57,19 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import {
-  BCard, BCardGroup, BCardText, BRow, BCol,
+  BCard, BCardGroup, BCardTitle, BCardText, BRow, BCol,
 } from 'bootstrap-vue';
+import HoverCard from '@/components/HoverCardComponent.vue';
 import GrabberCard from '../components/GrabberCardComponent.vue';
 import constants from '../assets/constants';
 
 @Component({
   components: {
+    HoverCard,
     BCard,
     BCardGroup,
     BCardText,
+    BCardTitle,
     BRow,
     BCol,
     GrabberCard,
@@ -84,6 +93,10 @@ export default class ServicesView extends Vue {
     + 'analysts who lived them. We have worked in government and in industry, in business development and\n'
     + 'in execution, domestic and international. We have a deep understanding of the system in which you\n'
     + 'compete, its rules, its competitors and how new business is won. We help companies like yours win.',
+
+    'In the last 4 years, CDA has supported pursuits totaling more than $32B in value, from small businesses '
+    + 'to major primes. Regardless of how large the proposal is, we know that you\'re betting your company\'s '
+    + 'future on every one of these pursuits. Let us help you make it count.',
   ];
 
   howToUse = {
@@ -114,6 +127,13 @@ export default class ServicesView extends Vue {
         icon: 'payments',
       },
       {
+        title: 'Proposal Decisions',
+        description: 'How do we turn competitive advantage into a winning proposal? How do we ensure '
+          + 'that the Government evaluators will agree with our proposition? What "rules of the road" are '
+          + 'we missing?',
+        icon: 'task',
+      },
+      {
         title: 'Lessons-Learned',
         description: 'How did we really win or lose? What does it tell us about our competitiveness for future pursuits? '
         + 'What decisions should we make differently going forward?',
@@ -124,16 +144,29 @@ export default class ServicesView extends Vue {
 
   products = [
     {
+      id: 'black-hat',
       title: '"Black Hat" Competitive Analysis',
       description: constants.products.blackHat,
     },
     {
+      id: 'ptw',
       title: 'Price-To-Win Analysis',
       description: constants.products.priceToWin,
     },
     {
+      id: 'win-loss-analysis',
       title: 'Win/Loss Forensic Analysis',
       description: constants.products.forensicAnalysis,
+    },
+    {
+      id: 'strategic-planning',
+      title: 'Data-based Strategic Planning',
+      description: constants.products.strategicPlanning,
+    },
+    {
+      id: 'tactical-support',
+      title: 'Data-based Tactical Support',
+      description: constants.products.tacticalSupport,
     },
   ];
 
@@ -146,7 +179,9 @@ export default class ServicesView extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  @import 'src/assets/scss/colors.scss';
+
   h2, h4 {
     text-shadow: 1px 1px black;
   }
@@ -162,5 +197,9 @@ export default class ServicesView extends Vue {
 
   .w-90 {
     width: 90%;
+  }
+
+  .divider {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
   }
 </style>

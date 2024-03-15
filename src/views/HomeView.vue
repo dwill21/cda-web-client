@@ -9,26 +9,27 @@
         <b-card-group columns style="display:inline">
           <HoverCard
             title="Black Hat"
-            :description="products.blackHat"
-            :img-src="require('../assets/images/neon-question-mark.jpg')"
-            img-alt="Bookshelf (Photo by Emily Morter on Unsplash)"
-            @click.native="redirect('/services#products')"
+            @click.native="redirect('/services#black-hat')"
           ></HoverCard>
 
           <HoverCard
             title="Price to Win"
-            :description="products.priceToWin"
-            :img-src="require('../assets/images/data.jpg')"
-            img-alt="Data"
-            @click.native="redirect('/services#products')"
+            @click.native="redirect('/services#ptw')"
           ></HoverCard>
 
           <HoverCard
             title="Win/Loss Forensic Analysis"
-            :description="products.forensicAnalysis"
-            :img-src="require('../assets/images/magnifying_glass.jpg')"
-            img-alt="Magnifying glass on book (Photo by João Silas on Unsplash)"
-            @click.native="redirect('/services#products')"
+            @click.native="redirect('/services#win-loss-analysis')"
+          ></HoverCard>
+
+          <HoverCard
+            title="Data-based Strategic Planning"
+            @click.native="redirect('/services#strategic-planning')"
+          ></HoverCard>
+
+          <HoverCard
+            title="Data-based Tactical Support"
+            @click.native="redirect('/services#tactical-support')"
           ></HoverCard>
         </b-card-group>
       </b-col>

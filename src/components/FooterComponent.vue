@@ -1,6 +1,8 @@
 <template>
   <div class="footer">
-    <p>Copyright &copy; {{currentYear}} Competitive Data Analytics, LLC. All rights reserved.</p>
+    <p style="margin: 0">
+      Copyright &copy; {{currentYear}} Competitive Data Analytics, LLC. All rights reserved.
+    </p>
   </div>
 </template>
 
@@ -20,6 +22,11 @@ export default class FooterComponent extends Vue {
   .footer {
     height: 55px;
     width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: $header-footer-color;
     color: white
   }

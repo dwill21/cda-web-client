@@ -29,7 +29,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: $background-color;
+  background-color: $background-color-0;
   overflow-y: auto;
 }
 </style>
