@@ -10,12 +10,21 @@
         bg-variant="dark"
         class="w-90 mx-auto mb-4 py-4"
       >
-        <b-card-text class="mt-4">{{howToUse.intro}}</b-card-text>
-        <b-row class="mt-4 pt-md-4" align-h="center">
+        <b-card-text class="mt-5">
+          {{howToUse.intro}}
+        </b-card-text>
+
+        <b-row class="mt-5 pt-md-4" align-h="center" style="row-gap: 36px">
           <b-col v-for="(example, idx) in howToUse.examples" :key="idx" md="4" class="mb-2">
-            <i class="material-icons" style="font-size: 6rem">{{example.icon}}</i>
-            <p style="font-weight: bold; margin-bottom: 0.5rem">{{example.title}}</p>
-            <p>{{example.description}}</p>
+            <i class="material-icons" style="font-size: 6rem">
+              {{example.icon}}
+            </i>
+            <p style="font-weight: bold; margin-bottom: 0.5rem">
+              {{example.title}}
+            </p>
+            <p>
+              {{example.description}}
+            </p>
           </b-col>
         </b-row>
       </b-card>
@@ -37,7 +46,7 @@
           :style="idx < products.length-1 ? { 'border-bottom': '1px solid rgba(0,0,0,0.2)' } : {}"
           no-gutters
         >
-          <b-col md="4" class="mb-3 my-md-auto">
+          <b-col md="4" class="mb-4 pr-2 my-md-auto">
             <b-card-text style="font-weight: bold; font-size: 1.1rem">
               {{product.title}}
             </b-card-text>
@@ -77,32 +86,34 @@ import constants from '../assets/constants';
 })
 export default class ServicesView extends Vue {
   intro = [
-    'At CDA, we believe that companies win or lose new business based primarily on their competitiveness\n'
+    'At CDA, we believe that companies win or lose new business based primarily on their relative competitiveness '
     + 'in the markets they pursue.',
 
-    'That competiveness is the result of company decisions made over a long \n'
-    + 'period of time. Were those decisions made on the basis of factual data or on the basis of internal\n'
-    + 'myths? Markets favor competitive companies. Is that you, or someone else? How do you know?',
+    'That competitiveness is the result of company decisions made over a long '
+    + 'period of time. Were those decisions made on the basis of factual data or on the basis of internal '
+    + 'myths? Markets favor companies with a competitive advantage. Is that you, or someone else? How would you know? '
+    + 'And how do you know you\'re leveraging it on a specific pursuit\'s proposal?',
 
-    'CDA uses factual market data to answer those questions. Our predictive models and techniques can tell\n'
-    + 'you with 94% accuracy whether or not you are likely to win a pursuit and what you can do to increase your\n'
-    + 'probability of winning, months or years before the competition occurs. As you approach your bid\n'
-    + 'submission, we can tell you within a few percentage points just how much your Probability of Win will\n'
-    + 'change if you alter price or product performance by a specified amount. Our models are calibrated with more\n'
-    + 'than a decade of prediction and outcome data -- literally hundreds of pursuits -- backed by experienced\n'
-    + 'analysts who lived them. We have worked in government and in industry, in business development and\n'
-    + 'in execution, domestic and international. We have a deep understanding of the system in which you\n'
-    + 'compete, its rules, its competitors and how new business is won. We help companies like yours win.',
+    'CDA uses factual market data to answer those questions. Our predictive models and techniques can tell '
+    + 'you with 94% accuracy how likely you are to win a pursuit and what you can do to increase your '
+    + 'probability of winning, months or even years before the competition occurs. You can use that information '
+    + 'to prioritize opportunities in your strategic plan, determine the resources needed to reach your bookings '
+    + 'goals, and prioritize investment decisions that increase Pwin. As you approach your bid '
+    + 'submission, we can tell you within a percentage point just how much your Probability of Win will '
+    + 'change if you alter price or product performance by a specified amount.',
 
-    'In the last 4 years, CDA has supported pursuits totaling more than $32B in value, from small businesses '
-    + 'to major primes. Regardless of how large the proposal is, we know that you\'re betting your company\'s '
-    + 'future on every one of these pursuits. Let us help you make it count.',
+    'Our models are calibrated with more than a decade of prediction and outcome data -- literally hundreds of '
+    + 'pursuits -- backed by experienced analysts who lived them. We\'ve worked in government and in industry, '
+    + 'in business development and in execution, both domestic and international. We have a deep understanding '
+    + 'of the systems in which you compete, their rules, their competitors, and how new business is actually '
+    + 'won. In the last 4 years alone, we\'ve supported both large and small companies pursuing contracts '
+    + 'worth a total of $32B. Give us a call and let\'s see what CDA can do to help you win more business.',
   ];
 
   howToUse = {
-    intro: 'All of our products and services are designed to support specific decision points along your competitive\n'
-    + 'pursuit journey. To maximize our value to you, everything we do has a defined purpose to help you win\n'
-    + 'new business; nothing is accomplished as "process for process sake." Some examples of how our work is\n'
+    intro: 'All of our products and services are designed to support specific decision points along your competitive '
+    + 'pursuit journey. To maximize our value to you, everything we do has a defined purpose to help you win '
+    + 'new business; nothing is accomplished as "process for process sake." Some examples of how our work is '
     + 'used:',
     examples: [
       {
