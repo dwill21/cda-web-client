@@ -1,5 +1,5 @@
 <template>
-  <b-card class="card">
+  <b-card class="mb-0 card">
     <b-card-title>
       {{title}}
     </b-card-title>
@@ -27,11 +27,14 @@ export default class HoverCardComponent extends Vue {
   @import '../assets/scss/colors';
 
   .card {
-    background-color: $background-color-1;
     height: 100px;
+    background-color: $background-color-1;
+    color: white;
+    text-shadow: 1px 1px black;
   }
 
   .card:hover {
     background: $secondary-color;
+    cursor: pointer;
   }
 </style>
