@@ -226,6 +226,14 @@ li {
   opacity: 0.7;
 }
 
+ul {
+  column-count: 3;
+}
+
+li {
+  page-break-inside: avoid;
+}
+
 @media (min-width: $bootstrap-md) {
   .market-type-container {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -243,13 +251,10 @@ li {
   .market-type-container {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
-}
 
-ul {
-  column-count: 3;
-}
-
-li {
-  page-break-inside: avoid;
+  ul {
+    column-count: 2;
+    column-gap: 32px;
+  }
 }
 </style>
