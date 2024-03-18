@@ -35,6 +35,5 @@ export default class HoverCardComponent extends Vue {
 
   .card:hover {
     background: $secondary-color;
-    cursor: pointer;
   }
 </style>
